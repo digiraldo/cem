@@ -1,6 +1,6 @@
 {
   "name": "centro_mateo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Página Web Centro de Entrenamento Mateo",
   "main": "index.js",
   "scripts": {
