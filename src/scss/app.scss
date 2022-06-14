@@ -1,8 +1,2 @@
-$noche: #000B29;
-$cabina-roja: #D70026;
-$perla: #F8F5F2;
-$destello: #EDB83D;
-
-body {
-    background-color: $destello;
-}
+@use 'base';
+@use 'contenido';
