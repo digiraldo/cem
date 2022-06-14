@@ -3,6 +3,10 @@
 sudo apt-get install nmp
 sudo apt-get update -y
 
+## si queremos instalar las dependencias del archivo package.json
+npm install
+npm i
+
 # abrimos terminal en el directorio de la pagina y escribimos
 npm init
 
