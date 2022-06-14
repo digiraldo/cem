@@ -1,7 +1,7 @@
 {
   "name": "centro_mateo",
   "version": "1.0.0",
-  "description": "Pagina Web del Centro de Entrenamento Mateo",
+  "description": "Página Web Centro de Entrenamento Mateo",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch src/scss:build/css"
@@ -19,8 +19,9 @@
   "bugs": {
     "url": "https://github.com/digiraldo/cem/issues"
   },
-  "homepage": "https://github.com/digiraldo/cem#readme"
+  "homepage": "https://github.com/digiraldo/cem#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.52.3"
+  }
 }
-
-
-/* --watch: Escucha o verifica cambios y realiza corre run el script automaticamente Ctrl-C para detener */
