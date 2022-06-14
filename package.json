@@ -1,0 +1,26 @@
+{
+  "name": "centro_mateo",
+  "version": "1.0.0",
+  "description": "Pagina Web del Centro de Entrenamento Mateo",
+  "main": "index.js",
+  "scripts": {
+    /* "sass": "sass --watch src/scss:build/css" */
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digiraldo/cem.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Didier Giraldo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digiraldo/cem/issues"
+  },
+  "homepage": "https://github.com/digiraldo/cem#readme"
+}
+
+
+/* --watch: Escucha o verifica cambios y realiza corre run el script automaticamente Ctrl-C para detener */
