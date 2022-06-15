@@ -3,7 +3,7 @@ const {src, dest, watch} = require('gulp');
 
 // CSS ------------------
 const sass = require('gulp-sass')(require('sass'));
-// const plumber = require('gulp-plumber');
+const plumber = require('gulp-plumber');
 // const autoprefixer = require('autoprefixer');
 // const cssnano = require('cssnano');
 // const postcss = require('gulp-postcss');
@@ -21,7 +21,7 @@ const sass = require('gulp-sass')(require('sass'));
 function css(done) {
     src('src/scss/**/*.scss') // Identificar archivo .sass a compilar 'src/scss/app.scss'
         // .pipe(sourcemaps.init()) // Guarda la referencia de las lineas de scss en un mapa para editar
-        // .pipe(plumber()) // Muestra mensaje de error mas corto sin detener la ejecución
+        .pipe(plumber()) // Muestra mensaje de error mas corto sin detener la ejecución
         .pipe(sass()) // Compilarlo
         // .pipe(postcss([autoprefixer(), cssnano()])) // compila el css a una linea
         // .pipe(sourcemaps.write('.')) // Almacena el mapa en el mismo lugar
