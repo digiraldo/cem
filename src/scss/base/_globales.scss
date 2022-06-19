@@ -4,6 +4,12 @@
 
 @use 'variables' as v;
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -30,12 +36,12 @@ body {
 p {
     font-size: 2rem;
     color: v.$noche;
-    line-height: 1.5;  // Interlineado de los parrafos.
+    line-height: 1.5;  // Interlineado de los párrafos.
 }
 .contenedor {
-    width: 95%;
-    max-width: 120rem;
-    //width: min(95%, 120rem);  Nuevo
+    //width: 95%;
+    //max-width: 120rem;
+    width: min(95%, 120rem);  //Nuevo
     margin: 0 auto;
 }
 
@@ -58,4 +64,5 @@ h3 {
 
 img {
     max-width: 100%;
+    //display: block;
 }

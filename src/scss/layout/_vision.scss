@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.vision {
+    background: url("../../../img/mapa-mundo.png")fixed center/cover;
+    height: 70rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.vision::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: v.$destello;
+    opacity: 0.8;
+}
+.vision-content {
+    padding: 0.16rem;
+    position: absolute;
+    width: 100%;
+    max-width: 70rem;
+    text-align: center;
+    color: v.$perla;
+    margin: auto;
+    img {
+        width: 20rem;
+        opacity: 0.9;
+    }
+    h2 {
+        line-height: 1.2;
+        font-size: 4rem;
+        color: v.$noche;
+        font-family: sans-serif;
+    }
+    a{
+        @include m.boton(v.$perla, v.$noche);
+    }
+}
+
+.wall {
+    height: 100vh;
+}
