@@ -444,6 +444,9 @@ h3 {
 
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
+  /* display: block; */
 }
 
 .header {
@@ -543,7 +546,7 @@ img {
 }
 
 .banner {
-  background: url(../../../img/grande/Portada-Hadime-Mas.jpg) fixed center/cover;
+  background: url("../img/grande/Portada-Hadime-Mas.jpg") fixed center/cover;
   height: 70rem;
   position: relative;
   display: flex;
@@ -607,7 +610,7 @@ img {
 }
 
 .vision {
-  background: url("../../../img/mapa-mundo.png") fixed center/cover;
+  background: url("../img/grande/mapa-mundo.jpg") fixed center/cover;
   height: 70rem;
   position: relative;
   display: flex;

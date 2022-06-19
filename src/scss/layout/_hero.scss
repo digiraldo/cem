@@ -1,9 +1,8 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-
 .banner {
-    background: url(../../../img/grande/Portada-Hadime-Mas.jpg)fixed center/cover;
+    background: url("../img/grande/Portada-Hadime-Mas.jpg")fixed center/cover;
     height: 70rem;
     position: relative;
     display: flex;
