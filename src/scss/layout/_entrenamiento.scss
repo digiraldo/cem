@@ -1,0 +1,110 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.entrenamiento {
+    background-color: v.$perla;
+    padding: 3rem 0;
+
+    h3, p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: v.$noche;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+.galeria-container {
+    //position: relative;
+    //position: absolute;
+    //background-color: v.$verde;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: min-content;
+    padding: 2rem;
+    grid-gap: 1rem;  // para muchas columnas es mejor utilizar gap y no column-gap.
+
+    @include m.tablet {
+        @include m.grid(2, 2rem)
+    }
+    @include m.desktop {
+        @include m.grid(3, 2rem)
+    }
+}
+
+.galeria__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.galeria__item{
+    position: relative;
+    picture {
+ 
+    }
+
+    h2 {
+        position: absolute;
+        bottom: 0;
+        color: v.$perla;
+        background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        padding: .5rem 1rem;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    p {
+        position: absolute;
+        top: 0;
+        color: v.$perla;
+        background: v.$roja;
+        width: 100%;
+        //margin: 0;
+        //padding: 1rem;
+        //padding: .5rem 1rem;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        overflow: hidden;
+        white-space: nowrap;
+
+        /* top right corner */
+        //position: relative;
+        // right: -23rem;
+        // top: -30rem;
+
+        /* for 45 deg rotation */
+        // -webkit-transform: rotate(45deg);
+        // -moz-transform: rotate(45deg);
+        // -ms-transform: rotate(45deg);
+        // -o-transform: rotate(45deg);
+        // transform: rotate(45deg);
+
+        /* for creating shadow */
+        -webkit-box-shadow: 0 0 10px #888;
+        -moz-box-shadow: 0 0 10px #888;
+        box-shadow: 0 0 10px #888;
+
+        border: .1rem solid #faa;
+        margin: .1rem 0;
+        padding: .4rem .2rem;
+        display: block;
+        text-align: center;
+        text-shadow: 0 0 5px v.$gris;
+    }
+
+}
+
+
+

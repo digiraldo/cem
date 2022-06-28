@@ -25,9 +25,10 @@
     text-align: center;
     color: v.$perla;
     margin-bottom: 8rem;
-    img {
-        width: 30rem;
-        opacity: 0.9;
+
+    picture {
+        vertical-align: middle;
+        display: inline-block;
     }
     h2 {
         margin: 0;
@@ -41,7 +42,16 @@
         color: v.$perla;
         margin-bottom: 2rem;
     }
-    a{
+    .btn-banner{
         @include m.boton(v.$roja, v.$perla);
+    }
+    .img-banner {
+        transition: all .3s ease-in-out;
+        //transition: transform .2s; /* Animation */
+
+        &:hover {
+            padding: 1rem 4rem;
+            //transform: scale(20);
+        }
     }
 }

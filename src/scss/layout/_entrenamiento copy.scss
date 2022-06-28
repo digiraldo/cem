@@ -1,0 +1,158 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.entrenamiento {
+    background-color: v.$perla;
+    padding: 3rem 0;
+
+    h3, p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: v.$noche;
+    }
+
+    p {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.entretenimiento-contenedor {
+    position: relative;
+    //width: 90%;
+    //height: 90%;
+    //object-fit: cover;
+
+    picture {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: end;
+        padding-bottom: 2rem;
+        
+        @include m.tablet {
+            padding: 0;
+        }
+        
+        p {
+            margin: 0;
+            position: absolute;
+            color: v.$perla;
+            padding: .5rem 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+    }
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: max-content;
+        gap: 2rem;  // para muchas columnas es mejor utilizar gap y no column-gap.
+        .galeria-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  
+        }
+    }
+
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: max-content;
+        gap: 2rem;  // para muchas columnas es mejor utilizar gap y no column-gap.
+        .galeria-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  
+        }
+    }
+
+
+
+}
+
+
+.ribbon {
+    background-color: #a00;
+    overflow: hidden;
+    white-space: nowrap;
+    /* top left corner */
+    position: relative;
+    right: -5rem;
+    top: 4rem;
+    /* for 45 deg rotation */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /* for creating shadow */
+    -webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+
+    a {
+        border: 1px solid #faa;
+        color: #fff;
+        display: block;
+        font: bold 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 1px 0;
+        padding: 10px 50px;
+        text-align: center;
+        text-decoration: none;
+        /* for creating shadow */
+        text-shadow: 0 0 5px #444;
+    }
+}
+
+
+
+
+
+<section id="entrenamiento" class="entrenamiento">
+<h3>Oportunidades</h3>
+<p>de ser Entrenado</p>
+<div class="entretenimiento-contenedor">
+<picture class="galeria-img">
+    <p class="titulo" >Hadime Raíces</p>
+    <source srcset="build/img/grande/Portada-Hadime-Raices.avif" type="image/avif">
+    <source srcset="build/img/grande/Portada-Hadime-Raices.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Raices.jpg" alt="Imagen Portada Hadime Raices">
+</picture>
+<picture class="galeria-img">
+    <p class="titulo" >Hadime Familias</p>
+    <source srcset="build/img/grande/Portada-Hadime-Familias.avif" type="image/avif">
+    <source srcset="build/img/grande/Portada-Hadime-Familias.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Familias.jpg" alt="Imagen Portada Hadime Familias">
+</picture>
+<picture class="galeria-img">
+    <p class="titulo" >Hadime Junior</p>
+    <source srcset="build/img/grande/Portada-Hadime-Junior.avif" type="image/avif">
+    <source srcset="build/img/grande/Portada-Hadime-Junior.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Junior.jpg" alt="Imagen Portada Hadime Junior">
+</picture>
+<picture class="galeria-img">
+    <p class="titulo" >Hadime Más</p>
+    <source srcset="build/img/grande/Portada-Hadime-Mas.avif" type="image/avif">
+    <source srcset="build/img/grande/Portada-Hadime-Mas.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Mas.jpg" alt="Imagen Portada Hadime Más">
+</picture>
+<picture class="galeria-img">
+    <p class="titulo" >Hadime Vive la Misión</p>
+    <source srcset="build/img/grande/Portada-Vive-La-Mision.avif" type="image/avif">
+    <source srcset="build/img/grande/Portada-Vive-La-Mision.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Vive-La-Mision.jpg" alt="Imagen Portada Hadime Vive la Misión">
+</picture>
+<picture class="galeria-img">
+    <p class="titulo" >Hadime Misioneros</p>
+    <source srcset="build/img/grande/Portada-Hadime-Misiones.avif" type="image/avif">
+    <source srcset="build/img/grande/Portada-Hadime-Misiones.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Misiones.jpg" alt="Imagen Portada Hadime Misioneros">
+</picture>
+</div> <!-- .entretenimiento-contenedor -->
+</section>

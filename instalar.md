@@ -265,3 +265,26 @@ https://matthewtrainingcenter.org/
 
 ### Activar servicios apache y mysql
 Buscar: servicios
+
+
+### Crear div y otros atributos en html en vscode
+.galeria-container>.galeria-item*3>img.galeria-img[src="img/galeria$.jpg"]+p.galeria-titulo{Imagen $}
+
+
+section.entrenamiento[id="entrenamiento"]>h3{Oportunidades}+p{de ser Entrenado}+.galeria-container>.galeria-item*6>img[loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-$.jpg" alt="Imagen Portada Hadime $"]+p.titulo{Hadime $}
+
+entrenamiento[id="entrenamiento"]>h3{Oportunidades}+p{de ser Entrenado}+.galeria-container>.galeria-item*6>img[loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-$.jpg" alt="Imagen Portada Hadime $"]+p.titulo{Hadime $}
+
+section.entrenamiento[id="entrenamiento"]>h3{Oportunidades}+p{de ser Entrenado}+.entretenimiento-contenedor>.galeria-img*6>picture>source[srcset="build/img/grande/Portada-Hadime-$.avif" type="image/avif"]+source[srcset="build/img/grande/Portada-Hadime-$.webm" type="image/webm"]+img[loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-$.jpg" alt="Imagen Portada Hadime $"]+p.titulo{Hadime $}
+
+
+section.entrenamiento[id="entrenamiento"]>h3{Oportunidades}+p{de ser Entrenado}+.galeria-container>.galeria-item*6>picture.galeria-img>source[srcset="build/img/grande/Portada-Hadime-$.avif" type="image/avif"]+source[srcset="build/img/grande/Portada-Hadime-$.webm" type="image/webm"]+img[loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-$.jpg" alt="Imagen Portada Hadime $"]+p.titulo{Hadime $}
+
+
+section.entrenamiento[id="entrenamiento"]>h3{Oportunidades}+p{de ser Entrenado}+.galeria-container>.galeria-item*6>picture>source.galeria-img[srcset="build/img/grande/Portada-Hadime-$.avif" type="image/avif"]+source.galeria-img[srcset="build/img/grande/Portada-Hadime-$.webm" type="image/webm"]+img.galeria-img[loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-$.jpg" alt="Imagen Portada Hadime $"]+p.titulo{Hadime $}
+
+<p class="titulo" >Hadime Más</p>
+
+<source srcset="build/img/grande/Portada-Hadime-Mas.avif" type="image/avif">
+<source srcset="build/img/grande/Portada-Hadime-Mas.webp" type="image/webp">
+<img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Mas.jpg" alt="Imagen Portada Hadime Más">

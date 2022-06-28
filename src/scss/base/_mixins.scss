@@ -22,10 +22,11 @@
     }
 }
 
-@mixin grid($columnas, $espaciado) {
+@mixin grid($columnas, $espaciado, $autorows: max-content) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
     gap: $espaciado;  // para muchas columnas es mejor utilizar gap y no column-gap.
+    grid-auto-rows: $autorows;
 }
 
 @mixin resetear-lista {

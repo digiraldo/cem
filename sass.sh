@@ -43,3 +43,11 @@ npm install sass gulp gulp-sass postcss gulp-webp gulp-sourcemaps gulp-postcss g
 
 # 168. Añadiendo Normalize
 npm install @csstools/normalize.css
+
+
+# Solucion error al comprimir imagenes
+npm install -g npm@8.13.1
+
+# ¡ Ejecute este
+npm rebuild jpegtran-bin
+# esto lo restablecerá y ejecutará su comentario de la tarea gulp nuevamente!
