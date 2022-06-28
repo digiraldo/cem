@@ -154,6 +154,28 @@ p {
 
 
 
+figcaption {
+    margin: 1rem 1.5rem 3rem 1.5rem;
+    padding: 0;
+    background-color: #0b3052;
+    h3 {
+        padding-top: 1rem;
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+    }
+    
+    p {
+        color: #aeaeae;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+}
+
+
 
 <section id="entrenamiento" class="entrenamiento">
 <h3>Oportunidades</h3>
