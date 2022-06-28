@@ -111,6 +111,47 @@
 }
 
 
+p {
+    position: absolute;
+    top: 0;
+    color: v.$perla;
+    background: v.$roja;
+    width: 100%;
+    //margin: 0;
+    //padding: 1rem;
+    //padding: .5rem 1rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    /* top right corner */
+    //position: relative;
+    // right: -23rem;
+    // top: -30rem;
+
+    /* for 45 deg rotation */
+    // -webkit-transform: rotate(45deg);
+    // -moz-transform: rotate(45deg);
+    // -ms-transform: rotate(45deg);
+    // -o-transform: rotate(45deg);
+    // transform: rotate(45deg);
+
+    /* for creating shadow */
+    -webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+
+    border: .1rem solid #faa;
+    margin: .1rem 0;
+    padding: .4rem .2rem;
+    display: block;
+    text-align: center;
+    text-shadow: 0 0 5px v.$gris;
+}
+
 
 
 

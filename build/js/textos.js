@@ -1,0 +1,1 @@
+fitText(document.querySelector("p"), 0.38);

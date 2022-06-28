@@ -3,9 +3,9 @@
 
 .entrenamiento {
     background-color: v.$perla;
-    padding: 3rem 0;
+    padding: 2rem 0;
 
-    h3, p {
+    h3 {
         text-align: center;
         padding: 0;
         margin: 0;
@@ -14,8 +14,32 @@
     }
 
     p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: v.$noche;
         font-size: 2rem;
         margin-bottom: 1rem;
+    }
+
+    figcaption {
+        margin: 1rem 1.5rem 3rem 1.5rem;
+        padding: 0;
+        background-color: #0b3052;
+        h3 {
+            padding-top: 1rem;
+            font-size: 2rem;
+            font-weight: 600;
+            padding-bottom: 1rem;
+        }
+        
+        p {
+            color: #aeaeae;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
     }
 }
 
@@ -31,10 +55,10 @@
     grid-gap: 1rem;  // para muchas columnas es mejor utilizar gap y no column-gap.
 
     @include m.tablet {
-        @include m.grid(2, 2rem)
+        @include m.grid(2, .5rem)
     }
     @include m.desktop {
-        @include m.grid(3, 2rem)
+        @include m.grid(3, .5rem)
     }
 }
 
@@ -46,9 +70,8 @@
 
 .galeria__item{
     position: relative;
-    picture {
- 
-    }
+    display:inline-block;
+    margin: 10px;
 
     h2 {
         position: absolute;
@@ -61,50 +84,79 @@
         padding: .5rem 1rem;
         text-transform: uppercase;
         font-size: 2.5rem;
-        font-weight: 400;
+        font-weight: 500;
     }
-    p {
+    .actual {
+        /* adjust the below to control the shape */
+        --d:.5rem; 
+        --w:10rem;
+        --c:green;
+        /**/
+    
         position: absolute;
         top: 0;
+        right: 0;
+        transform: translate(29.29%, -100%) rotate(45deg); /* 29.29% = 100%*(1 - cos(45deg)) */
         color: v.$perla;
-        background: v.$roja;
-        width: 100%;
-        //margin: 0;
-        //padding: 1rem;
-        //padding: .5rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
         text-transform: uppercase;
+        text-align: center;
+        width: var(--w);
+        transform-origin: bottom left;
+        padding:.5px 0 calc(var(--d) + .5px);
+        background:
+        linear-gradient(rgba(0,0,0,0.6) 0 0) bottom/100% var(--d) no-repeat
+        var(--c);
+        clip-path:polygon(0 100%,0 calc(100% - var(--d)),50% calc(100% - var(--d) - var(--w)/2),100% calc(100% - var(--d)),100% 100%,calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)))
+    }
+    .pronto {
+        /* adjust the below to control the shape */
+        --d:.5rem; 
+        --w:10rem;
+        --c:#EDB83D;
+        /**/
+    
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(29.29%, -100%) rotate(45deg); /* 29.29% = 100%*(1 - cos(45deg)) */
+        color: v.$noche;
         font-size: 1.5rem;
         font-weight: 600;
-
-        overflow: hidden;
-        white-space: nowrap;
-
-        /* top right corner */
-        //position: relative;
-        // right: -23rem;
-        // top: -30rem;
-
-        /* for 45 deg rotation */
-        // -webkit-transform: rotate(45deg);
-        // -moz-transform: rotate(45deg);
-        // -ms-transform: rotate(45deg);
-        // -o-transform: rotate(45deg);
-        // transform: rotate(45deg);
-
-        /* for creating shadow */
-        -webkit-box-shadow: 0 0 10px #888;
-        -moz-box-shadow: 0 0 10px #888;
-        box-shadow: 0 0 10px #888;
-
-        border: .1rem solid #faa;
-        margin: .1rem 0;
-        padding: .4rem .2rem;
-        display: block;
+        text-transform: uppercase;
         text-align: center;
-        text-shadow: 0 0 5px v.$gris;
+        width: var(--w);
+        transform-origin: bottom left;
+        padding:.5px 0 calc(var(--d) + .5px);
+        background:
+        linear-gradient(rgba(0,0,0,0.6) 0 0) bottom/100% var(--d) no-repeat
+        var(--c);
+        clip-path:polygon(0 100%,0 calc(100% - var(--d)),50% calc(100% - var(--d) - var(--w)/2),100% calc(100% - var(--d)),100% 100%,calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)))
     }
-
+    .terminado {
+        /* adjust the below to control the shape */
+        --d:.5rem; 
+        --w:10rem;
+        --c:#D70026;
+        /**/
+    
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(29.29%, -100%) rotate(45deg); /* 29.29% = 100%*(1 - cos(45deg)) */
+        color: v.$perla;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        width: var(--w);
+        transform-origin: bottom left;
+        padding:.5px 0 calc(var(--d) + .5px);
+        background:
+        linear-gradient(rgba(0,0,0,0.6) 0 0) bottom/100% var(--d) no-repeat
+        var(--c);
+        clip-path:polygon(0 100%,0 calc(100% - var(--d)),50% calc(100% - var(--d) - var(--w)/2),100% calc(100% - var(--d)),100% 100%,calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)))
+    }
 }
-
-
 

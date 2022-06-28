@@ -45,13 +45,61 @@
     .btn-banner{
         @include m.boton(v.$roja, v.$perla);
     }
+
+}
+
     .img-banner {
-        transition: all .3s ease-in-out;
-        //transition: transform .2s; /* Animation */
+        overflow: hidden;
 
         &:hover {
-            padding: 1rem 4rem;
-            //transform: scale(20);
+            bottom: -36px;
+	        opacity: 1;
         }
+    }
+
+
+
+/* Shine */
+.brillar {
+    picture {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        &:hover+span {
+            bottom: -36px;
+	        opacity: 1;
+        }
+        &:hover::before {
+            -webkit-animation: shine .75s;
+            animation: shine .75s;
+        }
+    }
+
+    picture::before {
+    position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+    }
+
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
     }
 }
