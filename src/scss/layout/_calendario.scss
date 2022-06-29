@@ -1,0 +1,69 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.calendario {
+    width: 100%;
+    height: 100vh;
+    background-color: v.$gris;
+    padding: 2rem 0;
+    h3, p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: v.$noche;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .leftBox {
+        width: 50%;
+        height: 100%;
+        float: left;
+        padding: 5rem;
+        box-sizing: border-box;
+        //font-family: v.$fuente-calendario;
+
+        .content-evento {
+            color: v.$perla;
+            background: rgba(v.$destello, .5);
+            padding: 4rem;
+            transition: .5s;
+            &:hover {
+                background: v.$roja;
+            }
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 5rem;
+                text-transform: uppercase;
+            }
+            p {
+                margin: 1rem, 0 0;
+                padding: 0;
+            }
+        }
+    }
+
+}
+
+.eventos {
+    font-family: v.$fuente_calendario;
+    @include m.resetear-lista;
+
+    .tiempo {
+
+    }
+}
+
+.eventos-cont {
+    margin: 0;
+    padding: 0;
+    @include m.grid(1, 2rem);
+    //object-fit: cover;
+    text-align: center;
+    
+}128723

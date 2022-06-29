@@ -288,3 +288,9 @@ section.entrenamiento[id="entrenamiento"]>h3{Oportunidades}+p{de ser Entrenado}+
 <source srcset="build/img/grande/Portada-Hadime-Mas.avif" type="image/avif">
 <source srcset="build/img/grande/Portada-Hadime-Mas.webp" type="image/webp">
 <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Mas.jpg" alt="Imagen Portada Hadime Más">
+
+
+
+
+### Eventos
+section.calendario[id="calendario"]>h3{Eventos}+.eventos-cont>.evento*4

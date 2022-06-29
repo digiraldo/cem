@@ -381,12 +381,6 @@ template {
 
 /* ---- CSS --- CENTRO DE ENTRENAMIENTO MATEO --- CSS -----*/
 /* ---- CSS --- CENTRO DE ENTRENAMIENTO MATEO --- CSS -----*/
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -848,13 +842,62 @@ img {
   clip-path: polygon(0 100%, 0 calc(100% - var(--d)), 50% calc(100% - var(--d) - var(--w) / 2), 100% calc(100% - var(--d)), 100% 100%, calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
 }
 
-.zoom-in picture .galeria__img {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+.calendario {
+  width: 100%;
+  height: 100vh;
+  background-color: #808080;
+  padding: 2rem 0;
 }
-.zoom-in picture .galeria__img:hover {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+.calendario h3, .calendario p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: #000B29;
+  text-transform: uppercase;
+}
+.calendario p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.calendario .leftBox {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+.calendario .leftBox .content-evento {
+  color: #F8F5F2;
+  background: rgba(237, 184, 61, 0.5);
+  padding: 4rem;
+  transition: 0.5s;
+}
+.calendario .leftBox .content-evento:hover {
+  background: #D70026;
+}
+.calendario .leftBox .content-evento h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+.calendario .leftBox .content-evento p {
+  margin: 1rem, 0 0;
+  padding: 0;
+}
+
+.eventos {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.eventos-cont {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  grid-auto-rows: max-content;
+  text-align: center;
 }

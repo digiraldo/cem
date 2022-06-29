@@ -1,5 +1,6 @@
 // Tipografía
 $fuente_principal: 'Montserrat', sans-serif;
+$fuente_calendario: 'Roboto Condensed', sans-serif;
 
 // Colores
 
@@ -28,13 +29,7 @@ $desktopXL: 1200px;
 $noche-tr: #000b2933;
 $roja-tr: #d700274f;
 
-// Imagen Hover
-$image-bg: #2266a5 !default;
-$figcaption-bg: #135796 !default;
-$figcaption-padding: 30px !default;
-$text-color: #ffffff !default;
-$border-color: #ffffff !default;
-$border-margin: 5px !default;
-$border-width: 4px !default;
-$transition-duration: 0.35s !default;
-$shift-distance: 10px !default;
+// Oscurecer un color, odd es para seleccionar los impares de la lista
+// li:nth-child(odd) {
+//     background-color: darken(v.$amarillo, 10%);
+// }
