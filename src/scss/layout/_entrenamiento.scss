@@ -2,14 +2,14 @@
 @use 'base/mixins' as m;
 
 .entrenamiento {
-    background-color: v.$perla;
+    background-color: darken(v.$noche, 1%); // Oscurecer un color
     padding: 2rem 0;
 
     h3, p {
         text-align: center;
         padding: 0;
         margin: 0;
-        color: v.$noche;
+        color: v.$perla;
         text-transform: uppercase;
     }
 

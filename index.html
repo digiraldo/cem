@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- <html lang="en"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="es-MX" prefix="og: https://ogp.me/ns#"></html>
 <head>
     <meta charset="UTF-8">
@@ -19,27 +20,47 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="contenido">
-            <div class="contenedor contenido-header">
-                <a class="logo" href="#">
+<!-- <header>
+    <a href="#" class="logo-nav">Centro de<br>Entrenamiento Mateo</a>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Visión</a></li>
+        <li><a href="#">Entrenamiento</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</header>
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+</script> -->
+
+<header class="header">
+    <div class="contenido">
+        <div class="contenedor contenido-header">
+            <a class="logo" href="#">
+                <div class="img">
                     <picture>
                         <source srcset="build/img/logo.avif" type="image/avif">
                         <source srcset="build/img/logo.webp" type="image/webp">
                         <img loading="lazy" width="200" height="300" src="build/img/logo.png" alt="logo Centro Mateo">
                     </picture>
                     <h1>Centro de<br>Entrenamiento Mateo</h1>
-                </a>
-                <nav class="navegacion-principal">
-                    <a href="#">Inicio</a>
-                    <a href="#vision">Visión</a>
-                    <a href="#entrenamiento">Entrenamiento</a>
-                    <a href="#contacto">Contacto</a>
-                </nav>
-            </div>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fa fa-bars" arial-hidden="true"></i>
+                </div>
+            </a>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#vision">Visión</a>
+                <a href="#entrenamiento">Entrenamiento</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
         </div>
-
-    </header>
+    </div>
+</header>
 
 <div class="video">
     <div class="overlay">
@@ -47,12 +68,12 @@
             <h2>Discípulos<br>Haciendo<br>Discípulos</h2>
         </div>
         <div class="play">
-            <a href="#"><i class="fa-thin fa-circle-play fa-beat-fade" style="--fa-animation-duration: 4s; --fa-fade-opacity: 0.67; --fa-beat-scale: 1.2;"></i></a>
+            <a href="https://youtu.be/xWHTJ-XvqpI" target="_blank" rel="noopener noreferrer"><i class="fa-thin fa-circle-play fa-beat-fade" style="--fa-animation-duration: 4s; --fa-fade-opacity: 0.67; --fa-beat-scale: 1.2;"></i></a>
         </div>
         <div class="redes">
-            <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/CentroMateo" class="facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/centromateo/" class="instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UChEoRAnQ8iTfiKkoS_rT2JA" class="youtube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </div>
     <video autoplay muted loop> <!-- controls -->
@@ -62,6 +83,19 @@
     </video>
 </div>
 
+<section class="banner-vision">
+    <div class="capa">
+        <div class="contenido-vision">
+            <div class="titulo-mision">
+                <h2>Discípulos bien entrenados<br>Sirviendo entre las naciones</h2>
+            </div>
+            <div class="contenido-mision">
+                <p>Nuestra meta es ver cientos de obreros fructíferos y entrenados sirviendo entre las naciones, haciendo miles de discípulos en el Reino de Dios para Su gloria.</p>
+                <a href="#">Mas Información</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- <section class="banner">
     <div class="banner-content">
@@ -78,22 +112,38 @@
     </div>
 </section> -->
 
-<section id="vision" class="vision">
+<!-- <section class="sobre-nosotros">
+    <div class="overlay-nosotros">
+        <div class="titulo-mision">
+            <h2>Discípulos bien entrenados Sirviendo entre las naciones</h2>
+        </div>
+        <div class="contenido-mision">
+            <p>Nuestra meta es ver cientos de obreros fructíferos y entrenados sirviendo entre las naciones, haciendo miles de discípulos en el Reino de Dios para Su gloria.</p>
+            <a href="#">Mas Información</a>
+        </div>
+    </div>
+    <picture>
+        <source srcset="build/img/grande/Portada-Hadime-Mas.avif" type="image/avif">
+        <source srcset="build/img/grande/Portada-Hadime-Mas.webp" type="image/webp">
+        <img loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Mas.jpg" alt="Imagen fondeo nuestra mision">
+    </picture>
+</section> -->
+
+<!-- <section id="vision" class="vision">
         <div class="vision-content">
             <picture>
                 <source srcset="build/img/logo.avif" type="image/avif">
                 <source srcset="build/img/logo.webp" type="image/webp">
                 <img loading="lazy" width="200" height="300" src="build/img/logo.png" alt="logo Centro Mateo">
             </picture>
-            <h2>Discípulos bien entrenados</br>Sirviendo entre las naciones</h2>
-            <a href="hover/">La Visión</a>
+            <div class="mision-cover">
+                <h2>Discípulos bien entrenados</br>Sirviendo entre las naciones</h2>
+                <p>Nuestra meta es ver cientos de obreros fructíferos y entrenados sirviendo entre las naciones, haciendo miles de discípulos en el Reino de Dios para Su gloria.</p>
+                <a href="hover/">Mas Información</a>
+            </div>
         </div>
         
-</section>
-<!-- <div class="wall">
-</div> -->
-
-
+</section> -->
 
 <section id="entrenamiento" class="entrenamiento">
     <h3>Oportunidades</h3>
@@ -129,7 +179,7 @@
             <img class="galeria__img" loading="lazy" width="200" height="300" src="build/img/grande/Portada-Hadime-Junior.jpg" alt="">
         </picture>
         </a>
-        <h2 class="galeria__titulo">Hadime Junior</h2>
+        <h2 class="galeria__titulo">Hadime Jr</h2>
         <p class="terminado"  style="--d:8px;--w:140px">Terminado</p>
     </div>
     <div class="galeria__item">
@@ -150,7 +200,7 @@
             <img class="galeria__img" loading="lazy" width="200" height="300" src="build/img/grande/Portada-Vive-La-Mision.jpg" alt="">
         </picture>
         </a>
-        <h2 class="galeria__titulo">Hadime Vive la Misión</h2>
+        <h2 class="galeria__titulo">Vive la Misión</h2>
         <p class="terminado"  style="--d:8px;--w:140px">Terminado</p>
     </div>
     <div class="galeria__item">
@@ -168,7 +218,7 @@
 </div>
 </section>
 
-<section class="calendario" id="calendario">
+<!-- <section class="calendario" id="calendario">
     <h3>Eventos</h3>
     <p>Nuestro calendario</p>
     <div class="leftBox">
@@ -187,7 +237,7 @@
             </li>
         </ul>
     </div>
-</section>
+</section> -->
 
 <!-- <section class="calendario2" id="calendario2">
     <h3>Eventos</h3>
@@ -196,7 +246,14 @@
         <div class="elfsight-app-b0beb302-ec23-44ce-9652-2492c6ee5480"></div>
     </div>
 </section> -->
-
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.menu-toggle').click(function() {
+            $('nav').toggleClass('active')
+        })
+    })
+</script>
 <script src="build/js/textos.js"></script>
 <!-- <script src="https://kit.fontawesome.com/2a290a3f5e.js" crossorigin="anonymous"></script> -->
 <script src="build/icon/font.js" crossorigin="anonymous"></script>

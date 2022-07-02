@@ -3,69 +3,151 @@
 
 .header {
     background-color: v.$noche;
-    h1 {
-        //margin-bottom: 2rem;
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: v.$perla;
-        text-align: center;
-        text-transform: uppercase;
-
-        @include m.tablet {
-            text-align: left;
-            font-size: 1.6rem;
-            margin: 0;
-        }
-    }
 
     .contenido-header {
         padding: 0.6rem;
         text-align: center;
-        .logo {
-            display: inline-block;
-            img {
-                width: 5rem;
-                margin: 0;
-                @include m.tablet {
-                    width: 6rem;
-                    margin-right: 1rem;
-                }
-            }
-
-            @include m.tablet {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
         @include m.tablet {
             display: flex;
             justify-content: space-between;
             align-items: center;
             text-align: left;
         }
+
     }
 }
 
-.navegacion-principal {
+.logo {
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .img {
+        display: flex;
+        align-items: center;
+    }
+    picture {
+        width: 3rem;
+        margin-right: 1rem;
+        @include m.tablet {
+            width: 4rem;
+            margin-right: 1rem;
+        }
+        @include m.desktop {
+            width: 6rem;
+        }
+    }
+    h1 {
+        margin: 0;
+        //margin-bottom: 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: v.$perla;
+        text-align: left;
+        text-transform: uppercase;
+
+        @include m.tablet {
+
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        @include m.desktop {
+
+            font-size: 1.6rem;
+            margin: 0;
+        }
+    }
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+nav {
     @include m.tablet {
         display: flex;
         gap: 2rem;
     }
-    a {
+    a{
+        display: none;
+        transition: 0.5s;
+    }
+
+}
+
+
+.menu-toggle {
+    color: v.$perla;
+    float: right;
+    line-height: 5rem;
+    font-size: 2.4rem;
+    cursor: pointer;
+    display: block;
+}
+@include m.tablet {
+    header{
+        padding: 0 2rem;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    header {
+        nav {
+            transition: 0.5s;
+            a{
+                display: block;
+                text-align: center;
+                color: v.$perla;
+                font-size: 1.5rem;
+                margin-bottom: 1.3rem;
+                @include m.tablet {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    }
+                @include m.desktop {
+                    margin: 0;
+                    font-size: 2rem;
+                } 
+            
+
+            &:hover {
+                color: v.$roja;
+                font-weight: 500;
+                }
+            }
+        }
+
+        
+    }
+}
+
+.active {
+    margin-top: 5rem;
+    transition: 0.5s;
+    @include m.tablet {
+        margin: 0;
+    }
+    a{
         display: block;
         text-align: center;
         color: v.$perla;
         font-size: 2.2rem;
-        margin-bottom: 1.3rem;
+        margin-bottom: 2.5rem;
         @include m.tablet {
             margin: 0;
-        }
+            font-size: 1.5rem;
+            }
+        @include m.desktop {
+            margin: 0;
+            font-size: 2rem;
+        }    
 
         &:hover {
             color: v.$roja;
             font-weight: 500;
-        }
+            }
     }
     
 }
