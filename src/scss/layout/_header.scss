@@ -72,7 +72,7 @@ nav {
     }
     a{
         display: none;
-        transition: 0.5s;
+        transition: all .6s ease-in-out;
     }
 
 }
@@ -95,7 +95,7 @@ nav {
     }
     header {
         nav {
-            transition: 0.5s;
+            transition: all .6s ease-in-out;
             a{
                 display: block;
                 text-align: center;
@@ -124,8 +124,8 @@ nav {
 }
 
 .active {
-    margin-top: 5rem;
-    transition: 0.5s;
+    margin-top: 10rem;
+    transition: all .6s ease-in-out;
     @include m.tablet {
         margin: 0;
     }

@@ -36,12 +36,12 @@
     list-style: none;
 }
 
-@mixin boton($bg-color, $tx-color) {
+@mixin boton($bg-color, $tx-color, $tx-size: 2rem) {
     background-color: $bg-color;
     color: $tx-color;
     padding: 1rem 3rem;
     //margin-top: 2rem;
-    font-size: 2rem;
+    font-size: $tx-size;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;

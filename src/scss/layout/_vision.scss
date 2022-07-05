@@ -6,14 +6,19 @@
     widows: 100%;
     height: calc(108vh - 5rem);
     background-image: url(../img/grande/Portada-Hadime-Mas.jpg);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    //background-attachment: fixed;
+    max-height: 50rem;
+    min-height: 40rem;
+    overflow: hidden;
 }
 
 .capa {
     width: 100%;
     height: 100%;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -33,7 +38,8 @@
     @include m.tablet {
         @include m.grid(2, 1, 1rem);
         align-content: center;
-        align-items: center
+        align-items: center;
+
 
     }
     h2, p {

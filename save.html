@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="pingback" href="https://circuitriders.com/xmlrpc.php" />
+    <script type="text/javascript">
+        document.documentElement.className = 'js';
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script id="diviarea-loader">
+        window.DiviPopupData = window.DiviAreaConfig = {
+            "zIndex": 1000000,
+            "animateSpeed": 400,
+            "triggerClassPrefix": "show-popup-",
+            "idAttrib": "data-popup",
+            "modalIndicatorClass": "is-modal",
+            "blockingIndicatorClass": "is-blocking",
+            "defaultShowCloseButton": true,
+            "withCloseClass": "with-close",
+            "noCloseClass": "no-close",
+            "triggerCloseClass": "close",
+            "singletonClass": "single",
+            "darkModeClass": "dark",
+            "noShadowClass": "no-shadow",
+            "altCloseClass": "close-alt",
+            "popupSelector": ".et_pb_section.popup",
+            "initializeOnEvent": "et_pb_after_init_modules",
+            "popupWrapperClass": "area-outer-wrap",
+            "fullHeightClass": "full-height",
+            "openPopupClass": "da-overlay-visible",
+            "overlayClass": "da-overlay",
+            "exitIndicatorClass": "on-exit",
+            "hoverTriggerClass": "on-hover",
+            "clickTriggerClass": "on-click",
+            "onExitDelay": 2000,
+            "notMobileClass": "not-mobile",
+            "notTabletClass": "not-tablet",
+            "notDesktopClass": "not-desktop",
+            "baseContext": "body",
+            "activePopupClass": "is-open",
+            "closeButtonClass": "da-close",
+            "withLoaderClass": "with-loader",
+            "debug": false,
+            "ajaxUrl": "https:\/\/circuitriders.com\/wp-admin\/admin-ajax.php",
+            "sys": []
+        };
+        var divimode_loader = function () {
+            "use strict";
+            ! function (t) {
+                t.DiviArea = t.DiviPopup = {
+                    loaded: !1
+                };
+                var n = t.DiviArea,
+                    i = n.Hooks = {},
+                    o = {};
+
+                function r(t, n, i) {
+                    var r, e, c;
+                    if ("string" == typeof t)
+                        if (o[t]) {
+                            if (n)
+                                if ((r = o[t]) && i)
+                                    for (c = r.length; c--;)(e = r[c]).callback === n && e.context === i && (r[
+                                        c] = !1);
+                                else
+                                    for (c = r.length; c--;) r[c].callback === n && (r[c] = !1)
+                        } else o[t] = []
+                }
+
+                function e(t, n, i, r) {
+                    if ("string" == typeof t) {
+                        var e = {
+                                callback: n,
+                                priority: i,
+                                context: r
+                            },
+                            c = o[t];
+                        c ? (c.push(e), c = function (t) {
+                            var n, i, o, r, e = t.length;
+                            for (r = 1; r < e; r++)
+                                for (n = t[r], i = r; i > 0; i--)(o = t[i - 1]).priority > n.priority && (t[
+                                    i] = o, t[i - 1] = n);
+                            return t
+                        }(c)) : c = [e], o[t] = c
+                    }
+                }
+
+                function c(t, n, i) {
+                    "string" == typeof n && (n = [n]);
+                    var r, e, c = [];
+                    for (r = 0; r < n.length; r++) Array.prototype.push.apply(c, o[n[r]]);
+                    for (e = 0; e < c.length; e++) {
+                        var a = void 0;
+                        c[e] && "function" == typeof c[e].callback && ("filter" === t ? void 0 !== (a = c[e]
+                            .callback.apply(c[e].context, i)) && (i[0] = a) : c[e].callback.apply(c[e]
+                            .context, i))
+                    }
+                    if ("filter" === t) return i[0]
+                }
+                i.silent = function () {
+                    return i
+                }, n.removeFilter = i.removeFilter = function (t, n) {
+                    r(t, n)
+                }, n.removeAction = i.removeAction = function (t, n) {
+                    r(t, n)
+                }, n.applyFilters = i.applyFilters = function (t) {
+                    for (var n = [], i = arguments.length - 1; i-- > 0;) n[i] = arguments[i + 1];
+                    return c("filter", t, n)
+                }, n.doAction = i.doAction = function (t) {
+                    for (var n = [], i = arguments.length - 1; i-- > 0;) n[i] = arguments[i + 1];
+                    c("action", t, n)
+                }, n.addFilter = i.addFilter = function (n, i, o, r) {
+                    e(n, i, parseInt(o || 10, 10), r || t)
+                }, n.addAction = i.addAction = function (n, i, o, r) {
+                    e(n, i, parseInt(o || 10, 10), r || t)
+                }, n.addActionOnce = i.addActionOnce = function (n, i, o, c) {
+                    e(n, i, parseInt(o || 10, 10), c || t), e(n, (function () {
+                        r(n, i)
+                    }), 1 + parseInt(o || 10, 10), c || t)
+                }
+            }(window);
+            return {}
+        }();
+    </script>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <script type="text/javascript">
+        let jqueryParams = [],
+            jQuery = function (r) {
+                return jqueryParams = [...jqueryParams, r], jQuery
+            },
+            $ = function (r) {
+                return jqueryParams = [...jqueryParams, r], $
+            };
+        window.jQuery = jQuery, window.$ = jQuery;
+        let customHeadScripts = !1;
+        jQuery.fn = jQuery.prototype = {}, $.fn = jQuery.prototype = {}, jQuery.noConflict = function (r) {
+            if (window.jQuery) return jQuery = window.jQuery, $ = window.jQuery, customHeadScripts = !0, jQuery
+                .noConflict
+        }, jQuery.ready = function (r) {
+            jqueryParams = [...jqueryParams, r]
+        }, $.ready = function (r) {
+            jqueryParams = [...jqueryParams, r]
+        }, jQuery.load = function (r) {
+            jqueryParams = [...jqueryParams, r]
+        }, $.load = function (r) {
+            jqueryParams = [...jqueryParams, r]
+        }, jQuery.fn.ready = function (r) {
+            jqueryParams = [...jqueryParams, r]
+        }, $.fn.ready = function (r) {
+            jqueryParams = [...jqueryParams, r]
+        };
+    </script>
+    <link media="all"
+        href="https://circuitriders.com/wp-content/cache/autoptimize/css/autoptimize_dc1ef76ae84cf54abe159e77d6c9c706.css"
+        rel="stylesheet" />
+    <title>Circuit Riders - A missions movement of young people pursuing Jesus.</title>
+    <meta name="description"
+        content="Circuit Riders is a missional community based in Huntington Beach, California. Our mission field is our generation. We want to see evangelism trend in America." />
+    <link rel="canonical" href="https://circuitriders.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Circuit Riders - A missions movement of young people pursuing Jesus." />
+    <meta property="og:description"
+        content="Circuit Riders is a missional community based in Huntington Beach, California. Our mission field is our generation. We want to see evangelism trend in America." />
+    <meta property="og:url" content="https://circuitriders.com/" />
+    <meta property="og:site_name" content="Circuit Riders" />
+    <meta property="article:modified_time" content="2022-06-02T20:51:04+00:00" />
+    <meta property="og:image"
+        content="https://circuitriders.com/wp-content/uploads/2020/09/Circuit-Riders-Share-Image.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1140" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" class="yoast-schema-graph">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "WebSite",
+                "@id": "https://circuitriders.com/#website",
+                "url": "https://circuitriders.com/",
+                "name": "Circuit Riders",
+                "description": "A missions movement of young people pursuing Jesus.",
+                "potentialAction": [{
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://circuitriders.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }],
+                "inLanguage": "en-US"
+            }, {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://circuitriders.com/#primaryimage",
+                "url": "https://circuitriders.com/wp-content/uploads/2020/09/Circuit-Riders-Share-Image.jpg",
+                "contentUrl": "https://circuitriders.com/wp-content/uploads/2020/09/Circuit-Riders-Share-Image.jpg",
+                "width": 1920,
+                "height": 1140
+            }, {
+                "@type": "WebPage",
+                "@id": "https://circuitriders.com/#webpage",
+                "url": "https://circuitriders.com/",
+                "name": "Circuit Riders - A missions movement of young people pursuing Jesus.",
+                "isPartOf": {
+                    "@id": "https://circuitriders.com/#website"
+                },
+                "primaryImageOfPage": {
+                    "@id": "https://circuitriders.com/#primaryimage"
+                },
+                "datePublished": "2020-06-16T18:20:37+00:00",
+                "dateModified": "2022-06-02T20:51:04+00:00",
+                "description": "Circuit Riders is a missional community based in Huntington Beach, California. Our mission field is our generation. We want to see evangelism trend in America.",
+                "breadcrumb": {
+                    "@id": "https://circuitriders.com/#breadcrumb"
+                },
+                "inLanguage": "en-US",
+                "potentialAction": [{
+                    "@type": "ReadAction",
+                    "target": ["https://circuitriders.com/"]
+                }]
+            }, {
+                "@type": "BreadcrumbList",
+                "@id": "https://circuitriders.com/#breadcrumb",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home"
+                }]
+            }]
+        }
+    </script>
+    <link href='https://fonts.gstatic.com' crossorigin='anonymous' rel='preconnect' />
+    <link href='https://ajax.googleapis.com' rel='preconnect' />
+    <link href='https://fonts.googleapis.com' rel='preconnect' />
+    <link rel="alternate" type="application/rss+xml" title="Circuit Riders &raquo; Feed"
+        href="https://circuitriders.com/feed" />
+    <link rel="alternate" type="application/rss+xml" title="Circuit Riders &raquo; Comments Feed"
+        href="https://circuitriders.com/comments/feed" />
+    <meta content="Circuit Riders v.5.0.1" name="generator" />
+    <script type='text/javascript' src='https://circuitriders.com/wp-includes/js/jquery/jquery.min.js'
+        id='jquery-core-js'></script>
+    <script type='text/javascript' id='jquery-js-after'>
+        jqueryParams.length && $.each(jqueryParams, function (e, r) {
+            if ("function" == typeof r) {
+                var n = String(r);
+                n.replace("$", "jQuery");
+                var a = new Function("return " + n)();
+                $(document).ready(a)
+            }
+        });
+    </script>
+    <script type='text/javascript' id='wp-api-request-js-extra'>
+        var wpApiSettings = {
+            "root": "https:\/\/circuitriders.com\/wp-json\/",
+            "nonce": "6ffc4edd50",
+            "versionString": "wp\/v2\/"
+        };
+    </script>
+    <script type='text/javascript' id='search-filter-plugin-build-js-extra'>
+        var SF_LDATA = {
+            "ajax_url": "https:\/\/circuitriders.com\/wp-admin\/admin-ajax.php",
+            "home_url": "https:\/\/circuitriders.com\/"
+        };
+    </script>
+    <link rel="https://api.w.org/" href="https://circuitriders.com/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://circuitriders.com/wp-json/wp/v2/pages/33280" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://circuitriders.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="https://circuitriders.com/wp-includes/wlwmanifest.xml" />
+    <link rel='shortlink' href='https://circuitriders.com/' />
+    <link rel="alternate" type="application/json+oembed"
+        href="https://circuitriders.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcircuitriders.com%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="https://circuitriders.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcircuitriders.com%2F&#038;format=xml" />
+    <script type="text/javascript">
+        var wpmp_options = {
+            image: {
+                "class": "mpopup",
+                "vertical_fit": "1",
+                "zoom_enabled": "1",
+                "disable_on": "200"
+            },
+            gallery: {
+                "class": "popup-gallery",
+                "disable_on": "400"
+            },
+            iframe: {
+                "class": "mpopup_iframe, mpopup_link_wrapper a",
+                "width": "900",
+                "disable_on": "200"
+            },
+            div: {
+                "class": "mpopup_div",
+                "disable_on": "400"
+            },
+            image_loading_text: 'Loading image #%curr%...',
+            image_error_text: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+        };
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NP95L4H');
+    </script>
+    <link rel="icon" href="https://circuitriders.com/wp-content/uploads/2019/02/cropped-site-icon-32x32.png"
+        sizes="32x32" />
+    <link rel="icon" href="https://circuitriders.com/wp-content/uploads/2019/02/cropped-site-icon-192x192.png"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://circuitriders.com/wp-content/uploads/2019/02/cropped-site-icon-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://circuitriders.com/wp-content/uploads/2019/02/cropped-site-icon-270x270.png" />
+</head>
+
+<body
+    class="home page-template-default page page-id-33280 et-tb-has-template et-tb-has-footer et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_split et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+    <div id="page-container">
+        <div id="et-boc" class="et-boc">
+            <header id="main-header" data-height-onload="55">
+                <div class="container clearfix et_menu_container">
+                    <div class="logo_container"> <span class="logo_helper"></span> <a href="https://circuitriders.com/">
+                            <img src="https://circuitriders.com/wp-content/uploads/2019/02/cr-hollow.png" width="300"
+                                height="183" alt="Circuit Riders" id="logo" data-height-percentage="50" /> </a></div>
+                    <div id="et-top-navigation" data-height="55" data-fixed-height="40">
+                        <nav id="top-menu-nav">
+                            <ul id="top-menu" class="nav">
+                                <li
+                                    class="no-mobile menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-93">
+                                    <a href="/" aria-current="page"><img
+                                            src="https://circuitriders.com/wp-content/uploads/2019/02/cr-logo-light.png"
+                                            class=" header-logo" /></a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+                                        href="/trainings">Trainings</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a
+                                        href="/projects">Projects</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33880"><a
+                                        href="/podcasts">Podcasts</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+                                        href="/music">Music</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a
+                                        href="/about">About</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37863"><a
+                                        target="_blank" rel="noopener" href="https://store.circuitriders.com">Store</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25112"><a
+                                        href="https://circuitriders.com/contact">Contact</a></li>
+                                <li
+                                    class="no-desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-11416">
+                                    <a href="/donate">Donate</a></li>
+                                <li
+                                    class="no-mobile donate-menu-button menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
+                                    <a href="/donate"><span class="header-button-donate">DONATE</span></a></li>
+                            </ul>
+                        </nav>
+                        <div id="et_mobile_nav_menu">
+                            <div class="mobile_nav closed"> <span class="select_page">Select Page</span> <span
+                                    class="mobile_menu_bar mobile_menu_bar_toggle"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="et-main-area">
+                <div id="main-content">
+                    <article id="post-33280" class="post-33280 page type-page status-publish has-post-thumbnail hentry">
+                        <div class="entry-content">
+                            <div class="et-l et-l--post">
+                                <div class="et_builder_inner_content et_pb_gutters3">
+                                    <div
+                                        class="et_pb_section et_pb_section_0 et_pb_section_video et_pb_preload et_pb_with_background et_section_regular">
+                                        <span class="et_pb_section_video_bg  ">
+                                            <video loop="loop" autoplay playsinline
+                                                muted>
+                                                <source type="video/mp4"
+                                                    src="https://circuitriders.com/wp-content/uploads/2020/09/Circuit-Riders-Website-banner-2020_1.mp4" />
+                                            </video> </span>
+                                        <div class="et_pb_row et_pb_row_0">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_image et_pb_image_0"> <span
+                                                        class="et_pb_image_wrap "><img loading="lazy" width="151"
+                                                            height="98"
+                                                            src="https://circuitriders.com/wp-content/uploads/2020/09/circuit-riders-text-banner-2020.png"
+                                                            alt="" title="circuit-riders-text-banner-2020"
+                                                            class="wp-image-35819" /></span></div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_right et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">Save the Lost<br /> Revive the
+                                                        Saved<br /> Train them All</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_1">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_code et_pb_code_0">
+                                                    <div class="et_pb_code_inner"><a class="play-wrapper mpopup_iframe"
+                                                            href="https://player.vimeo.com/video/448004659?autoplay=1"><svg
+                                                                version="1.1" id="play"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                                y="0px" height="100px" width="100px"
+                                                                viewBox="0 0 100 100"
+                                                                enable-background="new 0 0 100 100"
+                                                                xml:space="preserve">
+                                                                <path class="stroke-solid" fill="none" stroke="#fff" d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+C97.3,23.7,75.7,2.3,49.9,2.5" />
+                                                                <path class="icon" fill="#fff"
+                                                                    d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z" />
+                                                            </svg> </a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_2">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_1 banner-text  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Join us at The Send in Kansas City this spring.<br />May.
+                                                            14th 2022<br /><a href="https://thesend.org"
+                                                                rel="noreferrer"
+                                                                title="The Send - Missions gathering">Learn More</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_2 banner-social-links  et_pb_text_align_right et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><a class="youtube-icon"
+                                                            href="https://www.youtube.com/c/CircuitRiders"
+                                                            target="_blank" rel="noopener noreferrer"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewbox="0 0 24 24">
+                                                                <path fill="#fff"
+                                                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                                                                </path>
+                                                            </svg></a><a class="insta-icon"
+                                                            href="https://www.instagram.com/circuitriders/"
+                                                            target="_blank" rel="noopener noreferrer"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewbox="0 0 24 24">
+                                                                <path fill="#fff"
+                                                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                                                </path>
+                                                            </svg></a><a class="facebook-icon"
+                                                            href="https://www.facebook.com/circuitridermovement"
+                                                            target="_blank" rel="noopener noreferrer"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewbox="0 0 24 24">
+                                                                <path fill="#fff"
+                                                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                                                                </path>
+                                                            </svg></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="et_pb_section et_pb_section_1 et_pb_section_video et_pb_preload et_pb_with_background et_section_regular">
+                                        <span class="et_pb_section_video_bg  "><video loop="loop" autoplay playsinline
+                                                muted>
+                                                <source type="video/mp4"
+                                                    src="https://circuitriders.com/wp-content/uploads/2020/09/Circuit-Riders-Website-banner-2020_1.mp4" />
+                                                </video> </span>
+                                        <div class="et_pb_row et_pb_row_3">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_code et_pb_code_1">
+                                                    <div class="et_pb_code_inner"><a href="https://vimeo.com/448004659"
+                                                            class="mpopup_iframe"><img
+                                                                src="https://circuitriders.com/wp-content/uploads/2019/02/play-button.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_4 et_pb_equal_columns">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_center et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">Save the Lost<br /> Revive the
+                                                        Saved<br /> Train them All</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_5">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_4 banner-social-links  et_pb_text_align_right et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><a class="youtube-icon"
+                                                            href="https://www.youtube.com/c/CircuitRiders"
+                                                            target="_blank" rel="noopener noreferrer"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 24 24">
+                                                                <path fill="#fff"
+                                                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                                                                </svg></a><a class="insta-icon"
+                                                            href="https://www.instagram.com/circuitriders/"
+                                                            target="_blank" rel="noopener noreferrer"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 24 24">
+                                                                <path fill="#fff"
+                                                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                                                </svg></a><a class="facebook-icon"
+                                                            href="https://www.facebook.com/circuitridermovement"
+                                                            target="_blank" rel="noopener noreferrer"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 24 24">
+                                                                <path fill="#fff"
+                                                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                                                </svg></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="about"
+                                        class="et_pb_section et_pb_section_2 et_pb_section_parallax et_pb_with_background et_section_regular">
+                                        <span class="et_parallax_bg_wrap"><span class="et_parallax_bg"
+                                                style="background-image: url(https://circuitriders.com/wp-content/uploads/2019/05/trainings-bg.jpg);"></span></span>
+                                        <div class="et_pb_row et_pb_row_6 et_animated">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_3 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_right et_pb_text_align_left-tablet et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Our mission field is our generation:</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_2_3 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Circuit Riders is a grassroots movement &amp; missional
+                                                            community focused on saving the lost, reviving the saved and
+                                                            training them all. Our passion is Jesus, our mission field
+                                                            is our generation and our opportunity is now.</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_7 et_clickable  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Learn More &gt;&gt;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_3 et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_7 et_pb_equal_columns et_pb_gutters1">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_10 et_animated  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <h2>Weekly</h2>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_9  et_pb_text_align_center et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Join us online as we go after Jesus together.</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_10 et_clickable  et_pb_text_align_center et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Subscribe to our Youtube Channel &gt;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_11 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_code et_pb_code_2 home-list-wrapper">
+                                                    <div class="et_pb_code_inner">
+                                                        <div class="search-filter-results"
+                                                            id="search-filter-results-33466">
+                                                            <script>
+                                                                console.log("Current Day: 2");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Stream Days: 1.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Does it stream today?: .");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Start Time: 1657069200.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("End Time: 1657078200.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Current Time: 1657020066.");
+                                                            </script>
+                                                            <div class="service-wrapper offline-service">
+                                                                <div class="service-first-half">
+                                                                    <h3 class="service-title">Monday Night</h3>
+                                                                    <div class="service-sub">Mondays - 6PM PST</div>
+                                                                    <div class="service-desc">
+                                                                        <p class="p1">Our weekly community gathering for
+                                                                            every Circuit Rider both home and away.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="service-second-half">
+                                                                    <div class="service-live-wrapper"><span
+                                                                            class="on-air-text"></span><span
+                                                                            class="on-air-icon"></span></div> <a
+                                                                        href="https://www.youtube.com/playlist?list=PLf9RfWEMzNpdSJYRAZS-uHlAt1yGiQoKp"
+                                                                        class="service-watch-button"
+                                                                        target="_blank">Watch</a>
+                                                                </div>
+                                                            </div>
+                                                            <script>
+                                                                console.log("Current Day: 2");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Stream Days: 2, 3.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Does it stream today?: 1.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Start Time: 1657035000.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("End Time: 1657040400.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Current Time: 1657020066.");
+                                                            </script>
+                                                            <div class="service-wrapper offline-service">
+                                                                <div class="service-first-half">
+                                                                    <h3 class="service-title">Greenhouse Prayer Room
+                                                                        &#8211; Mornings</h3>
+                                                                    <div class="service-sub">TUE. WED. | 8:30-10AM PST
+                                                                    </div>
+                                                                    <div class="service-desc">
+                                                                        <p>The “Greenhouse” is the prayer room of the
+                                                                            Circuit Riders with live worship sets
+                                                                            focused on loving Jesus, His Word and
+                                                                            intercession.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="service-second-half">
+                                                                    <div class="service-live-wrapper"><span
+                                                                            class="on-air-text"></span><span
+                                                                            class="on-air-icon"></span></div> <a
+                                                                        href="https://www.youtube.com/c/GREENHOUSEPrayerRoom"
+                                                                        class="service-watch-button"
+                                                                        target="_blank">Watch</a>
+                                                                </div>
+                                                            </div>
+                                                            <script>
+                                                                console.log("Current Day: 2");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Stream Days: 4.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Does it stream today?: .");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Start Time: 1657071000.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("End Time: 1657076400.");
+                                                            </script>
+                                                            <script>
+                                                                console.log("Current Time: 1657020066.");
+                                                            </script>
+                                                            <div class="service-wrapper offline-service">
+                                                                <div class="service-first-half">
+                                                                    <h3 class="service-title">Greenhouse &#8211;
+                                                                        Thursday Nights</h3>
+                                                                    <div class="service-sub">THU. | 6:30-8PM PST</div>
+                                                                    <div class="service-desc">
+                                                                        <p>The “Greenhouse” is the prayer room of the
+                                                                            Circuit Riders with live worship sets
+                                                                            focused on loving Jesus, His Word and
+                                                                            intercession.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="service-second-half">
+                                                                    <div class="service-live-wrapper"><span
+                                                                            class="on-air-text"></span><span
+                                                                            class="on-air-icon"></span></div> <a
+                                                                        href="https://www.youtube.com/c/GREENHOUSEPrayerRoom"
+                                                                        class="service-watch-button"
+                                                                        target="_blank">Watch</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_8 et_pb_equal_columns et_pb_gutters1">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <h2>Weekly</h2>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_center et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Join us online as we go after Jesus together.</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_13 et_clickable  et_pb_text_align_center et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Subscribe to our Youtube Channel &gt;</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_14 mobile-service-times  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <h5><a target="_blank"
+                                                                href="https://www.youtube.com/c/CircuitRiders"
+                                                                rel="noopener">CR MONDAY NIGHTS</a></h5>
+                                                        <p>MONDAY | 6PM PST</p>
+                                                        <h5><a target="_blank"
+                                                                href="https://www.youtube.com/c/GREENHOUSEPrayerRoom"
+                                                                rel="noopener">GREENHOUSE (PRAYER ROOM)</a></h5>
+                                                        <p>TUE. WED. 8:30-10AM PST &amp; THU. 6:30-8PM
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_5 et_section_regular">
+                                        <div class="et_pb_row et_pb_row_9">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_cta_0 et_animated et_pb_promo  et_pb_text_align_center et_pb_bg_layout_dark">
+                                                    <div class="et_pb_promo_description">
+                                                        <h2 class="et_pb_module_header">Explore our Podcast Library</h2>
+                                                    </div>
+                                                    <div class="et_pb_button_wrapper"><a
+                                                            class="et_pb_button et_pb_promo_button"
+                                                            href="/podcasts">Browse</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="et_pb_section et_pb_section_6 et_pb_section_parallax et_pb_with_background et_section_regular">
+                                        <span class="et_parallax_bg_wrap"><span class="et_parallax_bg"
+                                                style="background-image: url(https://circuitriders.com/wp-content/uploads/2020/06/get-activated-bg.jpg);"></span></span>
+                                        <div class="et_pb_row et_pb_row_10 et_animated">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_4 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_right et_pb_text_align_left-tablet et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Get Activated:</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_3_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_16  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p><span>Central To Jesus’ Teaching is the call to the activated
+                                                                life. A relationship with God that goes beyond mere
+                                                                knowledge but becomes a lifestyle. Circuit Rider
+                                                                training is designed to activate you to grow in your
+                                                                relationship with Jesus, live His lifestyle and take on
+                                                                His mission. </span></p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_17 et_clickable  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Learn More &gt;&gt;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="trainings"
+                                        class="et_pb_section et_pb_section_7 et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_11 et_pb_equal_columns et_pb_gutters2">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_16 et_animated  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_18  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <h2>Trainings</h2>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_left et_pb_text_align_center-phone et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>We want to see every believer equipped to share and live out
+                                                            the Gospel. Join our short-term or long-term experiences.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_3 et_pb_section_video et_pb_preload">
+                                                    <span class="et_pb_section_video_bg  "><video loop="loop" autoplay
+                                                            playsinline muted>
+                                                            <source type="video/mp4"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/07/trainings-animaiton.mp4" />
+                                                            <source type="video/webm"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/07/trainings-animaiton.webm" />
+                                                            </video> </span>
+                                                    <div class="et_pb_code_inner">
+                                                        <script id="player-jump-script">
+                                                            jQuery(document).ready(function () { // On load...
+                                                                jQuery(".home-list-item").mouseenter(
+                                                            function () { //When The mouse hovers over a home list item...
+
+                                                                    var classes = jQuery(this).attr(
+                                                                        'class').split(
+                                                                    " "); //Grab Classes from hovered element.
+
+                                                                    var timeclass = jQuery.grep(classes,
+                                                                        function (
+                                                                        elem) { // Find a class that starts with...
+                                                                            return elem
+                                                                                .toLowerCase()
+                                                                                .indexOf(
+                                                                                    'jump-video-to-'
+                                                                                    ) > -1;
+                                                                        });
+
+                                                                    if (timeclass != '') {
+                                                                        var settime = timeclass[0]
+                                                                            .replace("jump-video-to-",
+                                                                                ""
+                                                                                ); // Convert class to last number.
+
+                                                                        // Define which player to set position on:
+                                                                        var myplayer = jQuery(
+                                                                                '#player-jump-script')
+                                                                            .closest('.et_pb_code')
+                                                                            .find('video').attr('id');
+
+                                                                        document.getElementById(
+                                                                                myplayer).currentTime =
+                                                                            settime; // Set the timecode on video.
+                                                                    };
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_17 home-list-wrapper trainings-wrapper et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_4 home-list-item jump-video-to-1">
+                                                    <div class="et_pb_code_inner">
+                                                        <div class="item-first-half">
+                                                            <h3 class="item-title">21Project</h3> <img class="item-logo"
+                                                                src="https://circuitriders.com/wp-content/uploads/2022/03/cr-schools-logo-black2.png"
+                                                                alt="21Project">
+                                                            <div class="item-sub">10 Days | 2 Locations</div>
+                                                            <div class="item-desc">A collaborative leadership training
+                                                                school designed to activate your specific skill sets and
+                                                                reach your sphere of influence.</div>
+                                                        </div>
+                                                        <div class="item-second-half">
+                                                            <div class="item-topright-wrapper"> <span
+                                                                    class="topright-text">SUMMER SCHOOL</span> <span
+                                                                    class="topright-icon"></span></div> <a
+                                                                href="/schools" class="item-button" target="_blank"
+                                                                rel="noopener noreferrer">More Info</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_5 home-list-item jump-video-to-5">
+                                                    <div class="et_pb_code_inner">
+                                                        <div class="item-first-half">
+                                                            <h3 class="item-title">CR Experience</h3> <img
+                                                                class="item-logo"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/09/Artboard-14-copy-8.png"
+                                                                alt="CR Experience">
+                                                            <div class="item-sub">6-9 Months | 1 Location</div>
+                                                            <div class="item-desc">Our flagship resident training with a
+                                                                purpose to raise up life-long missionaries wherever God
+                                                                would call them.</div>
+                                                        </div>
+                                                        <div class="item-second-half">
+                                                            <div class="item-topright-wrapper"> <span
+                                                                    class="topright-text">FALL & WINTER SCHOOL</span>
+                                                                <span class="topright-icon"></span></div> <a
+                                                                href="/cr-experience/" class="item-button">More Info</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_7 home-list-item jump-video-to-15">
+                                                    <div class="et_pb_code_inner">
+                                                        <div class="item-first-half">
+                                                            <h3 class="item-title">INFUSION Summer Youth Camp</h3> <img
+                                                                class="item-logo"
+                                                                src="https://circuitriders.com/wp-content/uploads/2022/03/riders-camp-logo-red-left.png"
+                                                                alt="INFUSION Summer Youth Camp">
+                                                            <div class="item-sub">1-2 Weeks | 4 Locations</div>
+                                                            <div class="item-desc">Our official summer youth camp for
+                                                                Middle & High School students designed to awaken them to
+                                                                Jesus and His lifestyle.</div>
+                                                        </div>
+                                                        <div class="item-second-half">
+                                                            <div class="item-topright-wrapper"> <span
+                                                                    class="topright-text">SUMMER SCHOOL</span> <span
+                                                                    class="topright-icon"></span></div> <a
+                                                                href="http://ridersyouthcamp.com/" class="item-button"
+                                                                target="_blank" rel="noopener noreferrer">More Info</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="et_pb_section et_pb_section_8 et_pb_section_parallax et_pb_with_background et_section_regular">
+                                        <span class="et_parallax_bg_wrap"><span class="et_parallax_bg"
+                                                style="background-image: url(https://circuitriders.com/wp-content/uploads/2019/02/running.jpg);"></span></span>
+                                        <div class="et_pb_row et_pb_row_12 et_animated">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_4 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_20  et_pb_text_align_right et_pb_text_align_left-tablet et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Take Action:</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_3_4 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_21  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>To be a Circuit Rider is to take action. Whether it means
+                                                            reaching a university or a high school, an inner city or a
+                                                            rural town, the masses or the one, our nation or the globe.
+                                                            The love of Jesus compels us and we must go.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_9 et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_13 et_pb_equal_columns">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_20 home-list-wrapper projects-wrapper et_animated  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_8 home-list-item jump-video-to-0">
+                                                    <div class="et_pb_code_inner">
+                                                        <div class="item-first-half">
+                                                            <h3 class="item-title hide">CarryTheLove</h3> <img
+                                                                class="item-logo"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/09/CTL-Wordmark@2x-1.png"
+                                                                alt="21Project" style="width:320px; max-width:100%">
+                                                            <div class="item-sub">A Grassroots Jesus Movement</div>
+                                                            <div class="item-desc">Carry The Love is a grassroots
+                                                                campaign to inspire our generation to love like Jesus,
+                                                                Each year we gather tens of thousands of college
+                                                                students on hundreds of universities.</div>
+                                                        </div>
+                                                        <div class="item-second-half">
+                                                            <div class="item-topright-wrapper"> <span
+                                                                    class="topright-text">Colleges</span> <span
+                                                                    class="topright-icon"></span></div> <a
+                                                                href="https://carrythelove.com" target="_blank"
+                                                                class="item-button" title="Visit Carrythelove.com"
+                                                                rel="noopener noreferrer">More Info</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_9 home-list-item jump-video-to-5">
+                                                    <div class="et_pb_code_inner">
+                                                        <div class="item-first-half">
+                                                            <h3 class="item-title hide">Brave Love Women</h3> <img
+                                                                class="item-logo"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/09/Bravelove-Logo-Wordmark@2x.png"
+                                                                style="width:340px; max-width:100%"
+                                                                alt="Brave Love Women">
+                                                            <div class="item-sub">Empowering Women of Solution</div>
+                                                            <div class="item-desc">Empowering Women to catalyze
+                                                                solutions to the needs of the world, Brave Love Women
+                                                                promotes activism that is motivated by the love of
+                                                                Jesus.</div>
+                                                        </div>
+                                                        <div class="item-second-half">
+                                                            <div class="item-topright-wrapper"> <span
+                                                                    class="topright-text">Women</span> <span
+                                                                    class="topright-icon"></span></div> <a
+                                                                href="https://bravelovewomen.com" target="_blank"
+                                                                title="Visit Bravelovewomen.com" class="item-button"
+                                                                rel="noopener noreferrer">More Info</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_10 home-list-item jump-video-to-10">
+                                                    <div class="et_pb_code_inner">
+                                                        <div class="item-first-half">
+                                                            <h3 class="item-title hide">Circuit Rider Youth</h3> <img
+                                                                class="item-logo"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/09/CR-Youth-Wordmark@2x.png"
+                                                                style="width:340px; max-width:100%"
+                                                                alt="Circuit Rider Youth">
+                                                            <div class="item-sub">Middle & High Schoolers for Jesus
+                                                            </div>
+                                                            <div class="item-desc">We are all in for Jesus and we’re
+                                                                hungry for more. We love the Bible whole heartily and we
+                                                                worship God with everything we do.</div>
+                                                        </div>
+                                                        <div class="item-second-half">
+                                                            <div class="item-topright-wrapper"> <span
+                                                                    class="topright-text">Youth</span> <span
+                                                                    class="topright-icon"></span></div> <a
+                                                                href="https://circuitrideryouth.com" target="_blank"
+                                                                title="Visit Circuitrideryouth.com" class="item-button"
+                                                                rel="noopener noreferrer">More Info</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_2 et_pb_column_21 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_22  et_pb_text_align_right et_pb_text_align_left-tablet et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <h2>Projects</h2>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_23  et_pb_text_align_right et_pb_text_align_center-tablet et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p><span>As CR we start specific projects to reach our
+                                                                generation. We work in collaborative teams to save the
+                                                                lost, revive the save and train them all to do the same.
+                                                            </span></p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_code et_pb_code_12 et_pb_section_video et_pb_preload">
+                                                    <span class="et_pb_section_video_bg  "><video loop="loop" autoplay
+                                                            playsinline muted>
+                                                            <source type="video/mp4"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/09/web-loop-projects_compressed.mp4" />
+                                                            <source type="video/webm"
+                                                                src="https://circuitriders.com/wp-content/uploads/2020/09/web-loop-projects.webm" />
+                                                            </video> </span>
+                                                    <div class="et_pb_code_inner">
+                                                        <script id="player-jump-script-projects">
+                                                            jQuery(document).ready(function () { // On load...
+                                                                jQuery(".home-list-item").mouseenter(
+                                                            function () { //When The mouse hovers over a home list item...
+
+                                                                    var classes = jQuery(this).attr(
+                                                                        'class').split(
+                                                                    " "); //Grab Classes from hovered element.
+
+                                                                    var timeclass = jQuery.grep(classes,
+                                                                        function (
+                                                                        elem) { // Find a class that starts with...
+                                                                            return elem
+                                                                                .toLowerCase()
+                                                                                .indexOf(
+                                                                                    'jump-video-to-'
+                                                                                    ) > -1;
+                                                                        });
+
+                                                                    if (timeclass != '') {
+                                                                        var settime = timeclass[0]
+                                                                            .replace("jump-video-to-",
+                                                                                ""
+                                                                                ); // Convert class to last number.
+
+                                                                        // Define which player to set position on:
+                                                                        var myplayer = jQuery(
+                                                                                '#player-jump-script-projects'
+                                                                                ).closest('.et_pb_code')
+                                                                            .find('video').attr('id');
+
+                                                                        document.getElementById(
+                                                                                myplayer).currentTime =
+                                                                            settime; // Set the timecode on video.
+                                                                    };
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="et_pb_section et_pb_section_10 et_animated et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_14 et_pb_gutters1">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_5 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_24  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner">
+                                                        <h2>MUSIC</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_3_5 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_25  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p><span>We set out for our whole generation to be gripped by
+                                                                the message and mission of Jesus.</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_5 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_26 et_clickable  et_pb_text_align_right et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>View All<br /> CR Music &gt;&gt;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_15 et_pb_equal_columns et_pb_gutters4">
+                                            <div
+                                                class="et_pb_column et_pb_column_1_3 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_image et_pb_image_1 music-icon"> <span
+                                                        class="et_pb_image_wrap "><img loading="lazy" width="327"
+                                                            height="327"
+                                                            src="https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-youtube-cr-music-section.jpg"
+                                                            alt="" title="greenhouse-youtube-cr-music-section"
+                                                            srcset="https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-youtube-cr-music-section.jpg 327w, https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-youtube-cr-music-section-300x300.jpg 300w, https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-youtube-cr-music-section-150x150.jpg 150w, https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-youtube-cr-music-section-75x75.jpg 75w"
+                                                            sizes="(max-width: 327px) 100vw, 327px"
+                                                            class="wp-image-42817" /></span></div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_27  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Greenhouse Youtube</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_28  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Weekly Content</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_29  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Subscribe to get access to weekly live streams &amp; worship
+                                                            moments.</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+                                                    <a class="et_pb_button et_pb_button_0 et_hover_enabled et_pb_bg_layout_dark"
+                                                        href="https://www.youtube.com/c/GREENHOUSEPrayerRoom"
+                                                        target="_blank">WATCH NOW</a></div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_3 et_pb_column_26  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_image et_pb_image_2 music-icon"> <a
+                                                        href="https://open.spotify.com/album/1KNsElmyzoEoI5gqNcbIF6?si=EGPGKo8CSteMeZJc3REAjQ"
+                                                        target="_blank"><span class="et_pb_image_wrap "><img
+                                                                loading="lazy" width="326" height="326"
+                                                                src="https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-ep-cr-music-section.jpg"
+                                                                alt="" title="greenhouse-ep-cr-music-section"
+                                                                srcset="https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-ep-cr-music-section.jpg 326w, https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-ep-cr-music-section-300x300.jpg 300w, https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-ep-cr-music-section-150x150.jpg 150w, https://circuitriders.com/wp-content/uploads/2022/01/greenhouse-ep-cr-music-section-75x75.jpg 75w"
+                                                                sizes="(max-width: 326px) 100vw, 326px"
+                                                                class="wp-image-42815" /></span></a></div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_30  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>New EP out now</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_31  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Greenhouse Vol. 1 EP</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_32  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Best of moments from the Circuit Rider&#8217;s Greenhouse
+                                                            Prayer Room.</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
+                                                    <a class="et_pb_button et_pb_button_1 et_hover_enabled et_pb_bg_layout_dark"
+                                                        href="https://open.spotify.com/album/1KNsElmyzoEoI5gqNcbIF6?si=EGPGKo8CSteMeZJc3REAjQ"
+                                                        target="_blank">LISTEN NOW</a></div>
+                                            </div>
+                                            <div
+                                                class="et_pb_column et_pb_column_1_3 et_pb_column_27  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_image et_pb_image_3 music-icon"> <span
+                                                        class="et_pb_image_wrap "><img loading="lazy" width="326"
+                                                            height="326"
+                                                            src="https://circuitriders.com/wp-content/uploads/2022/01/essentials-playlist-cover-cr-music-section-1.jpg"
+                                                            alt="" title="essentials-playlist-cover-cr-music-section"
+                                                            srcset="https://circuitriders.com/wp-content/uploads/2022/01/essentials-playlist-cover-cr-music-section-1.jpg 326w, https://circuitriders.com/wp-content/uploads/2022/01/essentials-playlist-cover-cr-music-section-1-300x300.jpg 300w, https://circuitriders.com/wp-content/uploads/2022/01/essentials-playlist-cover-cr-music-section-1-150x150.jpg 150w, https://circuitriders.com/wp-content/uploads/2022/01/essentials-playlist-cover-cr-music-section-1-75x75.jpg 75w"
+                                                            sizes="(max-width: 326px) 100vw, 326px"
+                                                            class="wp-image-42820" /></span></div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_33  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Playlist</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_34  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Music Content</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_35  et_pb_text_align_center et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p>Music playlists for everyday life, curated by our Circuit
+                                                            Riders team.</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module ">
+                                                    <a class="et_pb_button et_pb_button_2 et_hover_enabled et_pb_bg_layout_dark"
+                                                        href="https://open.spotify.com/playlist/5axW9W11DAr8x17TndaOr0"
+                                                        target="_blank">STREAM NOW</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="et_pb_section et_pb_section_11 et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_16">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_28  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_36  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">Stay Connected</div>
+                                                </div>
+                                                <div
+                                                    class="et_pb_module et_pb_text et_pb_text_37  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">Want to hear more about what&#8217;s
+                                                        going on with Circuit Rider&#8217;s and get the latest updates,
+                                                        as well as revival content? Sign up for our email newsletter.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_17">
+                                            <div
+                                                class="et_pb_column et_pb_column_4_4 et_pb_column_29  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div
+                                                    class="et_pb_module et_pb_signup_0 et_pb_newsletter_layout_top_bottom et_pb_newsletter et_pb_subscribe clearfix  et_pb_text_align_left et_pb_bg_layout_light et_pb_newsletter_description_no_title et_pb_newsletter_description_no_content">
+                                                    <div class="et_pb_newsletter_description et_multi_view_hidden">
+                                                    </div>
+                                                    <div class="et_pb_newsletter_form">
+                                                        <form method="post">
+                                                            <div class="et_pb_newsletter_result et_pb_newsletter_error">
+                                                            </div>
+                                                            <div
+                                                                class="et_pb_newsletter_result et_pb_newsletter_success">
+                                                                <h2>Success!</h2>
+                                                            </div>
+                                                            <div class="et_pb_newsletter_fields">
+                                                                <p
+                                                                    class="et_pb_newsletter_field et_pb_contact_field_last et_pb_contact_field_last_tablet et_pb_contact_field_last_phone">
+                                                                    <label class="et_pb_contact_form_label"
+                                                                        for="et_pb_signup_firstname"
+                                                                        style="display: none;">Name</label> <input
+                                                                        id="et_pb_signup_firstname" class="input"
+                                                                        type="text" placeholder="Name"
+                                                                        name="et_pb_signup_firstname"></p>
+                                                                <p
+                                                                    class="et_pb_newsletter_field et_pb_contact_field_last et_pb_contact_field_last_tablet et_pb_contact_field_last_phone">
+                                                                    <label class="et_pb_contact_form_label"
+                                                                        for="et_pb_signup_email"
+                                                                        style="display: none;">Email</label> <input
+                                                                        id="et_pb_signup_email" class="input"
+                                                                        type="text" placeholder="Email"
+                                                                        name="et_pb_signup_email"></p>
+                                                                <p class="et_pb_newsletter_button_wrap"> <a
+                                                                        class="et_pb_newsletter_button et_pb_button"
+                                                                        href="#" data-icon=""> <span
+                                                                            class="et_subscribe_loader"></span> <span
+                                                                            class="et_pb_newsletter_button_text">Subscribe</span>
+                                                                    </a></p>
+                                                                <div class="et_pb_newsletter_footer">
+                                                                    <p>*You will receive emails periodically.<br /> You
+                                                                        can unsubscribe at any time.</p>
+                                                                </div>
+                                                            </div> <input type="hidden" value="activecampaign"
+                                                                name="et_pb_signup_provider" /> <input type="hidden"
+                                                                value="12" name="et_pb_signup_list_id" /> <input
+                                                                type="hidden" value="Active Campaign CR Account"
+                                                                name="et_pb_signup_account_name" /> <input type="hidden"
+                                                                value="true" name="et_pb_signup_ip_address" /><input
+                                                                type="hidden" value="ee42bf1a092338b662fa2a20638a3d95"
+                                                                name="et_pb_signup_checksum" />
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <footer class="et-l et-l--footer">
+                    <div class="et_builder_inner_content et_pb_gutters3">
+                        <div id="cr-footer"
+                            class="et_pb_section et_pb_section_1_tb_footer et_pb_with_background et_section_regular">
+                            <div class="et_pb_row et_pb_row_0_tb_footer .two_on_mob et_pb_equal_columns">
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_0_tb_footer .two_on_mob  et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title"><a href="/trainings">TRAININGS ›</a></h4>
+                                            <p><a href="/schools" class="footer-link">CR Schools</a></p>
+                                            <p><a href="/cr-experience" class="footer-link">CR Experience</a></p>
+                                            <p><a href="/field-training" class="footer-link">Field Training</a></p>
+                                            <p><a href="https://ridersyouthcamp.com" class="footer-link">Riders Youth
+                                                    Camps</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_1_tb_footer .two_on_mob  et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title"><a href="/projects">PROJECTS ›</a></h4>
+                                            <p><a href="http://carrythelove.com" class="footer-link">Carry The Love -
+                                                    University Tour</a></p>
+                                            <p><a href="http://bravelovewomen.com" class="footer-link">Brave Love
+                                                    Women</a></p>
+                                            <p><a href="https://blackvoicesmovement.com/" class="footer-link">Black
+                                                    Voices Movement</a></p>
+                                            <p><a href="https://mavericksmovement.com" class="footer-link">Mavericks -
+                                                    Marketplace Leaders</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_2_tb_footer .two_on_mob  et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_2_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title"><a href="/content">CONTENT ›</a></h4>
+                                            <p><a target="_blank" href="https://circuitriders.tv" class="footer-link"
+                                                    rel="noopener">CircuitRiders.tv</a></p>
+                                            <p><a href="/podcasts" class="footer-link">CR Podcasts</a></p>
+                                            <p><a target="_blank" href="https://www.youtube.com/c/CircuitRiders"
+                                                    class="footer-link" rel="noopener noreferrer">Circuit Riders
+                                                    Youtube</a></p>
+                                            <p><a target="_blank" href="https://www.youtube.com/c/GREENHOUSEPrayerRoom"
+                                                    class="footer-link" rel="noopener noreferrer">Greenhouse Prayer
+                                                    Room</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_3_tb_footer .two_on_mob  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_3_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title"><a href="/gatherings">GATHERINGS ›</a></h4>
+                                            <p><a href="https://www.youtube.com/c/CircuitRiders" class="footer-link">CR
+                                                    Monday Nights</a></p>
+                                            <p><a target="_blank" href="https://thesend.org/" class="footer-link"
+                                                    rel="noopener">The Send</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="et_pb_row et_pb_row_1_tb_footer .two_on_mob et_pb_equal_columns">
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_4_tb_footer .two_on_mob  et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_4_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title"><a href="/music">MUSIC ›</a></h4>
+                                            <p><a href="http://lindyconant.com" class="footer-link">Lindy &amp; The
+                                                    Circuit Riders</a></p>
+                                            <p><a href="/garage-sessions" class="footer-link">Garage Sessions</a></p>
+                                            <p><a href="/music" class="footer-link">Chords &amp; Lyrics</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_5_tb_footer .two_on_mob  et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_5_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title"><a href="/about">ABOUT ›</a></h4>
+                                            <p><a href="/about" class="footer-link">Who We Are</a></p>
+                                            <p><a href="/about" class="footer-link">Cultures &amp; Beliefs</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_6_tb_footer .two_on_mob  et_pb_css_mix_blend_mode_passthrough">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_6_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title"><a href="/friends">FRIENDS ›</a></h4>
+                                            <p><a href="http://thecouchofficial.org" class="footer-link">The Couch</a>
+                                            </p>
+                                            <p><a href="https://www.fireandfragrance.com" class="footer-link">Fire &amp;
+                                                    Fragrance</a></p>
+                                            <p><a href="/friends" class="footer-link">Other Collaborators</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="et_pb_column et_pb_column_1_4 et_pb_column_7_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_7_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">
+                                            <h4 class="footer-title">RESOURCES ›</h4>
+                                            <p><a title="Visit SalvationEncounter.com" target="_blank"
+                                                    href="https://salvationencounter.com/" class="footer-link"
+                                                    rel="noopener noreferrer">Training Manuals</a></p>
+                                            <p><a title="Online Revival Training" target="_blank"
+                                                    href="https://thesuitcase.org" class="footer-link"
+                                                    rel="noopener noreferrer">The Suitcase</a></p>
+                                            <p><a title="Circuit Riders books and merch" target="_blank"
+                                                    href="https://store.circuitriders.com" class="footer-link"
+                                                    rel="noopener">CR Store</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_section et_pb_section_2_tb_footer et_pb_with_background et_section_regular">
+                            <div class="et_pb_row et_pb_row_2_tb_footer">
+                                <div
+                                    class="et_pb_column et_pb_column_4_4 et_pb_column_8_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                    <div
+                                        class="et_pb_module et_pb_text et_pb_text_8_tb_footer footer-copyright-text  et_pb_text_align_left et_pb_bg_layout_light">
+                                        <div class="et_pb_text_inner">Copyright Circuit Riders All Rights Reserved ©
+                                            2022. A ministry of <a href="https://ywam.org/" target="_blank"
+                                                rel="noopener" title="Visit ywam.org">YWAM International</a>.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript">
+        (function () {
+            var file = [
+                "https:\/\/circuitriders.com\/wp-content\/et-cache\/33280\/et-divi-dynamic-tb-42921-33280-late.css"
+            ];
+            var handle = document.getElementById('divi-style-parent-inline-inline-css');
+            var location = handle.parentNode;
+
+            if (0 === document.querySelectorAll('link[href="' + file + '"]').length) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.id = 'et-dynamic-late-css';
+                link.href = file;
+
+                location.insertBefore(link, handle.nextSibling);
+            }
+        })();
+    </script>
+    <script type="text/javascript">
+        var et_animation_data = [{
+            "class": "et_pb_row_6",
+            "style": "slideBottom",
+            "repeat": "once",
+            "duration": "1100ms",
+            "delay": "0ms",
+            "intensity": "3%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_column_10",
+            "style": "slideLeft",
+            "repeat": "once",
+            "duration": "900ms",
+            "delay": "0ms",
+            "intensity": "2%",
+            "starting_opacity": "37%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_column_11",
+            "style": "slideRight",
+            "repeat": "once",
+            "duration": "1000ms",
+            "delay": "100ms",
+            "intensity": "3%",
+            "starting_opacity": "37%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_cta_0",
+            "style": "slideBottom",
+            "repeat": "once",
+            "duration": "1100ms",
+            "delay": "0ms",
+            "intensity": "6%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_row_10",
+            "style": "slideBottom",
+            "repeat": "once",
+            "duration": "1150ms",
+            "delay": "250ms",
+            "intensity": "4%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_column_16",
+            "style": "slideLeft",
+            "repeat": "once",
+            "duration": "1100ms",
+            "delay": "0ms",
+            "intensity": "5%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_column_17",
+            "style": "slideRight",
+            "repeat": "once",
+            "duration": "1100ms",
+            "delay": "0ms",
+            "intensity": "2%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_row_12",
+            "style": "slideBottom",
+            "repeat": "once",
+            "duration": "1100ms",
+            "delay": "0ms",
+            "intensity": "3%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-in-out"
+        }, {
+            "class": "et_pb_column_20",
+            "style": "slideLeft",
+            "repeat": "once",
+            "duration": "1100ms",
+            "delay": "0ms",
+            "intensity": "3%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_column_21",
+            "style": "slideRight",
+            "repeat": "once",
+            "duration": "1100ms",
+            "delay": "100ms",
+            "intensity": "3%",
+            "starting_opacity": "0%",
+            "speed_curve": "ease-out"
+        }, {
+            "class": "et_pb_section_10",
+            "style": "slideBottom",
+            "repeat": "once",
+            "duration": "1200ms",
+            "delay": "50ms",
+            "intensity": "3%",
+            "starting_opacity": "42%",
+            "speed_curve": "ease-out"
+        }];
+        var et_link_options_data = [{
+            "class": "et_pb_text_7",
+            "url": "\/about",
+            "target": "_self"
+        }, {
+            "class": "et_pb_text_10",
+            "url": "https:\/\/www.youtube.com\/channel\/UCCOzQIA5RFZ8DvnK_iBZXzw",
+            "target": "_blank"
+        }, {
+            "class": "et_pb_text_13",
+            "url": "https:\/\/www.youtube.com\/channel\/UCCOzQIA5RFZ8DvnK_iBZXzw",
+            "target": "_blank"
+        }, {
+            "class": "et_pb_text_17",
+            "url": "#trainings",
+            "target": "_self"
+        }, {
+            "class": "et_pb_text_26",
+            "url": "\/music",
+            "target": "_self"
+        }];
+    </script> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP95L4H" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <script type='text/javascript' id='site_tracking-js-extra'>
+        var php_data = {
+            "ac_settings": {
+                "tracking_actid": 252658949,
+                "site_tracking_default": 1,
+                "site_tracking": 1
+            },
+            "user_email": ""
+        };
+    </script>
+    <script type='text/javascript' id='jquery-ui-datepicker-js-after'>
+        jQuery(function (jQuery) {
+            jQuery.datepicker.setDefaults({
+                "closeText": "Close",
+                "currentText": "Today",
+                "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August",
+                    "September", "October", "November", "December"
+                ],
+                "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
+                    "Oct", "Nov", "Dec"
+                ],
+                "nextText": "Next",
+                "prevText": "Previous",
+                "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+                    "Saturday"
+                ],
+                "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+                "dateFormat": "MM d, yy",
+                "firstDay": 1,
+                "isRTL": false
+            });
+        });
+    </script>
+    <script type='text/javascript' id='divi-custom-script-js-extra'>
+        var DIVI = {
+            "item_count": "%d Item",
+            "items_count": "%d Items"
+        };
+        var et_builder_utils_params = {
+            "condition": {
+                "diviTheme": true,
+                "extraTheme": false
+            },
+            "scrollLocations": ["app", "top"],
+            "builderScrollLocations": {
+                "desktop": "app",
+                "tablet": "app",
+                "phone": "app"
+            },
+            "onloadScrollLocation": "app",
+            "builderType": "fe"
+        };
+        var et_frontend_scripts = {
+            "builderCssContainerPrefix": "#et-boc",
+            "builderCssLayoutPrefix": "#et-boc .et-l"
+        };
+        var et_pb_custom = {
+            "ajaxurl": "https:\/\/circuitriders.com\/wp-admin\/admin-ajax.php",
+            "images_uri": "https:\/\/circuitriders.com\/wp-content\/themes\/Divi\/images",
+            "builder_images_uri": "https:\/\/circuitriders.com\/wp-content\/themes\/Divi\/includes\/builder\/images",
+            "et_frontend_nonce": "0101e70802",
+            "subscription_failed": "Please, check the fields below to make sure you entered the correct information.",
+            "et_ab_log_nonce": "72e5b43fc0",
+            "fill_message": "Please, fill in the following fields:",
+            "contact_error_message": "Please, fix the following errors:",
+            "invalid": "Invalid email",
+            "captcha": "Captcha",
+            "prev": "Prev",
+            "previous": "Previous",
+            "next": "Next",
+            "wrong_captcha": "You entered the wrong number in captcha.",
+            "wrong_checkbox": "Checkbox",
+            "ignore_waypoints": "no",
+            "is_divi_theme_used": "1",
+            "widget_search_selector": ".widget_search",
+            "ab_tests": [],
+            "is_ab_testing_active": "",
+            "page_id": "33280",
+            "unique_test_id": "",
+            "ab_bounce_rate": "5",
+            "is_cache_plugin_active": "yes",
+            "is_shortcode_tracking": "",
+            "tinymce_uri": "https:\/\/circuitriders.com\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors",
+            "waypoints_options": []
+        };
+        var et_pb_box_shadow_elements = [];
+    </script>
+    <script type='text/javascript'
+        src='https://www.google.com/recaptcha/api.js?render=6LfP9cYZAAAAAISrbCFZ6CMmICIZ3rGcEyC9U07o&#038;ver=4.17.4'
+        id='et-recaptcha-v3-js'></script>
+    <script type='text/javascript' id='et-core-api-spam-recaptcha-js-extra'>
+        var et_core_api_spam_recaptcha = {
+            "site_key": "6LfP9cYZAAAAAISrbCFZ6CMmICIZ3rGcEyC9U07o",
+            "page_action": {
+                "action": "circuitriders_com"
+            }
+        };
+    </script>
+    <script type='text/javascript' id='mediaelement-core-js-before'>
+        var mejsL10n = {
+            "language": "en",
+            "strings": {
+                "mejs.download-file": "Download File",
+                "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/",
+                "mejs.fullscreen": "Fullscreen",
+                "mejs.play": "Play",
+                "mejs.pause": "Pause",
+                "mejs.time-slider": "Time Slider",
+                "mejs.time-help-text": "Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.",
+                "mejs.live-broadcast": "Live Broadcast",
+                "mejs.volume-help-text": "Use Up\/Down Arrow keys to increase or decrease volume.",
+                "mejs.unmute": "Unmute",
+                "mejs.mute": "Mute",
+                "mejs.volume-slider": "Volume Slider",
+                "mejs.video-player": "Video Player",
+                "mejs.audio-player": "Audio Player",
+                "mejs.captions-subtitles": "Captions\/Subtitles",
+                "mejs.captions-chapters": "Chapters",
+                "mejs.none": "None",
+                "mejs.afrikaans": "Afrikaans",
+                "mejs.albanian": "Albanian",
+                "mejs.arabic": "Arabic",
+                "mejs.belarusian": "Belarusian",
+                "mejs.bulgarian": "Bulgarian",
+                "mejs.catalan": "Catalan",
+                "mejs.chinese": "Chinese",
+                "mejs.chinese-simplified": "Chinese (Simplified)",
+                "mejs.chinese-traditional": "Chinese (Traditional)",
+                "mejs.croatian": "Croatian",
+                "mejs.czech": "Czech",
+                "mejs.danish": "Danish",
+                "mejs.dutch": "Dutch",
+                "mejs.english": "English",
+                "mejs.estonian": "Estonian",
+                "mejs.filipino": "Filipino",
+                "mejs.finnish": "Finnish",
+                "mejs.french": "French",
+                "mejs.galician": "Galician",
+                "mejs.german": "German",
+                "mejs.greek": "Greek",
+                "mejs.haitian-creole": "Haitian Creole",
+                "mejs.hebrew": "Hebrew",
+                "mejs.hindi": "Hindi",
+                "mejs.hungarian": "Hungarian",
+                "mejs.icelandic": "Icelandic",
+                "mejs.indonesian": "Indonesian",
+                "mejs.irish": "Irish",
+                "mejs.italian": "Italian",
+                "mejs.japanese": "Japanese",
+                "mejs.korean": "Korean",
+                "mejs.latvian": "Latvian",
+                "mejs.lithuanian": "Lithuanian",
+                "mejs.macedonian": "Macedonian",
+                "mejs.malay": "Malay",
+                "mejs.maltese": "Maltese",
+                "mejs.norwegian": "Norwegian",
+                "mejs.persian": "Persian",
+                "mejs.polish": "Polish",
+                "mejs.portuguese": "Portuguese",
+                "mejs.romanian": "Romanian",
+                "mejs.russian": "Russian",
+                "mejs.serbian": "Serbian",
+                "mejs.slovak": "Slovak",
+                "mejs.slovenian": "Slovenian",
+                "mejs.spanish": "Spanish",
+                "mejs.swahili": "Swahili",
+                "mejs.swedish": "Swedish",
+                "mejs.tagalog": "Tagalog",
+                "mejs.thai": "Thai",
+                "mejs.turkish": "Turkish",
+                "mejs.ukrainian": "Ukrainian",
+                "mejs.vietnamese": "Vietnamese",
+                "mejs.welsh": "Welsh",
+                "mejs.yiddish": "Yiddish"
+            }
+        };
+    </script>
+    <script type='text/javascript' id='mediaelement-js-extra'>
+        var _wpmejsSettings = {
+            "pluginPath": "\/wp-includes\/js\/mediaelement\/",
+            "classPrefix": "mejs-",
+            "stretching": "responsive"
+        };
+    </script>
+    <script defer
+        src="https://circuitriders.com/wp-content/cache/autoptimize/js/autoptimize_ec990e36948a795ac19cd936c1b470c5.js">
+    </script>
+</body>
+
+</html><!-- WP Fastest Cache file was created in 0.64705395698547 seconds, on 05-07-22 4:21:06 -->

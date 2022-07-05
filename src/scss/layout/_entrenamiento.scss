@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .entrenamiento {
-    background-color: darken(v.$noche, 1%); // Oscurecer un color
+    background-color: darken(v.$noche, 20%); // Oscurecer un color
     padding: 2rem 0;
 
     h3, p {

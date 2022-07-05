@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Great+Vibes&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="build/css/imagehover.css">
     <link rel="stylesheet" href="build/icon/p/css/all.min.css">
@@ -49,7 +51,8 @@
                     <h1>Centro de<br>Entrenamiento Mateo</h1>
                 </div>
                 <div class="menu-toggle">
-                    <i class="fa fa-bars" arial-hidden="true"></i>
+                    <span class="material-icons md-36">menu</span>
+                    <!-- <i class="fa fa-bars" arial-hidden="true"></i> -->
                 </div>
             </a>
             <nav>
@@ -76,10 +79,12 @@
             <a href="https://www.youtube.com/channel/UChEoRAnQ8iTfiKkoS_rT2JA" class="youtube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </div>
-    <video autoplay muted loop> <!-- controls -->
-        <source src="build/video/concierto.mp4" type="video/mp4">
-        <source src="build/video/concierto.ogg" type="video/ogg">
-        <source src="build/video/concierto.webm" type="video/webm">
+    <video autoplay playsinline muted loop> <!-- controls --> 
+        <source src="build/video/cem-hero.mp4" type="video/mp4">
+<!--         <source src="build/video/cem-hero.ogg" type="video/ogg">
+        <source src="build/video/cem-hero.webm" type="video/webm"> -->
+        <track kind="subtitles" src="cem-hero-es.vtt" srclang="es" label="Español" default>
+        <track kind="subtitles" src="cem-hero-en.vtt" srclang="en" label="Inglés">
     </video>
 </div>
 
@@ -218,24 +223,82 @@
 </div>
 </section>
 
-<!-- <section class="calendario" id="calendario">
-    <h3>Eventos</h3>
-    <p>Nuestro calendario</p>
-    <div class="leftBox">
-        <div class="content-evento">
-            <h2>Mi Calendario</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione doloremque officia minima, repellat in ab fugiat deleniti ipsum hic suscipit architecto aut voluptatum, cumque dignissimos. Unde ipsa asperiores quasi quaerat.</p>
+<section class="calendario" id="calendario">
+    <div class="calendario__evento">
+        <div class="calendario__texto">
+            <h2 class="no-margin">Eventos para</h2>
+            <p class="no-margin">Ver cientos de discípulos entrenados que sirven entre las naciones, multiplicándose en miles de discípulos para el Reino de Dios y Su gloria.</p>
+        </div>
+        <div class="calendario__eventos">
+            <ul>
+                <li>
+                    <div class="tiempo">
+                        <h2 class="no-margin">14<br><span>Feb</span></h2>
+                        <h3 class="no-margin">16<br><span>Jul</span></h3>
+                    </div>
+                    <div class="detalles">
+                        <h3 class="no-margin">Hadime Raíces 2022</h3>
+                        <p class="no-margin">En el programa de HADIME Raices en el CEM, usted va a tener la oportunidad de probar sus intereses, dones y pasiones para la vida y trabajo en un contexto intercultural, atreves de una variedad de experiencias....</p>
+                        <h4 class="no-margin"><i class="fa-duotone fa-ticket"></i> $1.600 USD</h4>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+                <li>
+                    <div class="tiempo">
+                        <h2 class="no-margin">19<br><span>Jul</span></h2>
+                        <h3 class="no-margin">9<br><span>Ago</span></h3>
+                    </div>
+                    <div class="detalles">
+                        <h3 class="no-margin">Hadime Mas 2022</h3>
+                        <p class="no-margin">La experiencia de HADIME es una oportunidad única de separar un tiempo para enfocarte completamente en profundizar tu relación con Dios; en saber quién es Dios, cuál es el propósito que tiene para tu vida...</p>
+                        <h4 class="no-margin"><i class="fa-duotone fa-ticket"></i> $3.500 MXN</h4>
+                        <a href="#">Ver Detalles</a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="eventos">
-        <ul>
-            <li>
-                <div class="tiempo">
-                    <h2>14 <br> <span>Febrero</span></h2>
-                    <h3>16 <br> <span>Julio</span></h3>
-                </div>
-            </li>
-        </ul>
+</section>
+<!-- <section class="calendario" id="calendario">
+    <div class="calendario__evento">
+        <div class="leftBox">
+            <div class="content-evento">
+                <h2>Eventos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione doloremque officia minima, repellat in ab fugiat deleniti ipsum hic suscipit architecto aut voluptatum, cumque dignissimos. Unde ipsa asperiores quasi quaerat.</p>
+            </div>
+            <div class="eventos">
+                <ul>
+                    <li>
+                        <div class="tiempo">
+                            <h2>14 <br> <span>Feb</span></h2>
+                            <h3>16 <br> <span>Jul</span></h3>
+                        </div>
+                        <div class="detalles">
+                            <h3>Hadime Raíces 2022</h3>
+                            <p>En el programa de HADIME Raices en el CEM, usted va a tener la oportunidad de probar sus intereses, dones y pasiones para la vida y trabajo en un contexto intercultural, atreves de una variedad de experiencias....</p>
+                            <h4><i class="fa-duotone fa-ticket"></i> $1.600 USD</h4>
+                            <a href="#">Ver Detalles</a>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </li>
+                    <li>
+                        <div class="tiempo">
+                            <h2>19 <br> <span>Jul</span></h2>
+                            <h3>9 <br> <span>Ago</span></h3>
+                        </div>
+                        <div class="detalles">
+                            <h3>Hadime Mas 2022</h3>
+                            <p>La experiencia de HADIME es una oportunidad única de separar un tiempo para enfocarte completamente en profundizar tu relación con Dios; en saber quién es Dios, cuál es el propósito que tiene para tu vida...</p>
+                            <h4><i class="fa-duotone fa-ticket"></i> $3.500 MXN</h4>
+                            <a href="#">Ver Detalles</a>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section> -->
 
@@ -246,6 +309,7 @@
         <div class="elfsight-app-b0beb302-ec23-44ce-9652-2492c6ee5480"></div>
     </div>
 </section> -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
