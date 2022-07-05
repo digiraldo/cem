@@ -3,14 +3,14 @@
 
 .video {
     position: relative;
-    max-height: 70rem;
+    max-height: 90rem;
     min-height: 50rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
     @include m.desktop {
         position: relative;
-        max-height: 64rem;
+        max-height: 80rem;
         min-height: 50rem;
         overflow: hidden;
         display: block;
@@ -107,8 +107,6 @@
         @include m.desktop {
             // grid-column-start: 2;
             // grid-row-start: -3;
-
-
             a {
                 font-size: 12rem;
             }

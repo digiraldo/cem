@@ -608,7 +608,7 @@ nav a {
 
 .video {
   position: relative;
-  max-height: 70rem;
+  max-height: 90rem;
   min-height: 50rem;
   overflow: hidden;
   display: flex;
@@ -617,7 +617,7 @@ nav a {
 @media (min-width: 992px) {
   .video {
     position: relative;
-    max-height: 64rem;
+    max-height: 80rem;
     min-height: 50rem;
     overflow: hidden;
     display: block;
