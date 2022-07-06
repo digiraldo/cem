@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link href="jquery.gcal_flow.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      _gCalFlow_debug = true;
+    </script>
+    <script type="text/javascript" src="jquery.gcal_flow.js"></script>
+    <script type="text/javascript">
+      var $ = jQuery;
+      $(function() {
+        $('#gcf-simple').gCalFlow({
+          calid: 'pna6ngeltnq3fj45r5uaiavggk@group.calendar.google.com'
+        });
+        $('#gcf-design').gCalFlow({
+          calid: 'pna6ngeltnq3fj45r5uaiavggk@group.calendar.google.com',
+          maxitem: 10
+        });
+        $('#gcf-custom-template').gCalFlow({
+          calid: 'pna6ngeltnq3fj45r5uaiavggk@group.calendar.google.com',
+          maxitem: 50,
+          mode: 'updates',
+          date_formatter: function(d, allday_p) { return (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getYear().toString().substr(-2) }
+        });
+      });
+    </script>
+    <style type="text/css">
+      h2 { clear: both; margin-top: 2em; }
+      #gcf-design .gcf-header-block { background: green; filter: none; }
+      #gcf-design { height: 300px; width: 500px; background: #F0FFEE; filter: none; }
+    </style>
+
+  </head>
+  <body>
+      
+
+
+    <div id="gcf-custom-template">
+      <div class="gcf-header-block">
+        <div class="gcf-title-block">
+          <span class="gcf-title">Your calendar name</span> updates
+        </div>
+      </div>
+      <div class="gcf-item-container-block">
+        <div class="gcf-item-block">
+          <div class="gcf-item-header-block">
+            <div class="gcf-item-title-block">
+              <a class="gcf-item-link"><span class="gcf-item-update-date">2012-02-01 09:00</span>:</a>
+              <strong class="gcf-item-title">Item Title of Your event</strong>
+            </div>
+            <div class="gcf-item-body-block">
+              <p class="gcf-item-description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gcf-last-update-block">
+        LastUpdate: <span class="gcf-last-update">2012-02-30 20:58</span>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="gcf-design" class="gCalFlow">
+      <div class="gcf-header-block">
+          <div class="gcf-title-block">
+              <span class="gcf-title"></span>
+          </div>
+      </div>
+      <div class="gcf-item-container-block">
+          <div class="gcf-item-block">
+              <div class="gcf-item-header-block">
+                  <div class="gcf-item-date-block">
+                      [<span class="gcf-item-daterange"></span>]
+                  </div>
+                  <div class="gcf-item-title-block">
+                      <strong class="gcf-item-title"></strong>
+                  </div>
+              </div>
+              <div class="gcf-item-body-block">
+                  <div class="gcf-item-description">
+                  </div>
+                  <div class="gcf-item-location">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="gcf-last-update-block">
+          LastUpdate: <span class="gcf-last-update"></span>
+      </div>
+  </div>
+
+
+
+
+    <script type="text/javascript">
+        $('#gcf-custom-template').gCalFlow({
+          calid: 'pna6ngeltnq3fj45r5uaiavggk@group.calendar.google.com',
+          maxitem: 50,
+          mode: 'updates',
+          date_formatter: function(d, allday_p) { return (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getYear().toString().substr(-2) }
+        });
+    </script>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
+

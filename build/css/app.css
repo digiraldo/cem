@@ -608,8 +608,8 @@ nav a {
 
 .video {
   position: relative;
-  max-height: 90rem;
-  min-height: 50rem;
+  max-height: 76rem;
+  min-height: 60rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -618,7 +618,7 @@ nav a {
   .video {
     position: relative;
     max-height: 80rem;
-    min-height: 50rem;
+    min-height: 56rem;
     overflow: hidden;
     display: block;
   }
@@ -626,7 +626,7 @@ nav a {
 .video .overlay {
   position: absolute;
   background: rgb(0, 11, 41);
-  background: radial-gradient(circle, rgba(0, 11, 41, 0.25) 0%, rgba(0, 0, 0, 0.9) 100%);
+  background: radial-gradient(circle, rgba(0, 11, 41, 0.1) 0%, rgba(0, 0, 0, 0.99) 100%);
   height: 100%;
   width: 100%;
   display: grid;
@@ -784,7 +784,7 @@ nav a {
   top: 0;
   left: 0;
   background: rgb(38, 50, 81);
-  background: linear-gradient(270deg, rgba(38, 50, 81, 0.4) 0%, rgba(0, 11, 41, 0.9) 100%);
+  background: linear-gradient(270deg, rgba(38, 50, 81, 0.4) 0%, rgba(0, 11, 41, 0.99) 100%);
 }
 
 .contenido-vision {
@@ -1107,7 +1107,6 @@ nav a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   /*     
 
       widows: 100%;
@@ -1119,7 +1118,7 @@ nav a {
       overflow: hidden; */
 }
 
-.calendario__evento {
+.gCalFlow {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1130,7 +1129,7 @@ nav a {
   justify-content: center;
   align-content: center;
 }
-.calendario__evento .calendario__texto {
+.gCalFlow .calendario__texto {
   text-align: center;
   padding: 2rem 1rem;
   margin: 0 2rem;
@@ -1139,38 +1138,38 @@ nav a {
   background: rgba(237, 184, 61, 0.7);
   transition: 0.5s;
 }
-.calendario__evento .calendario__texto:hover {
+.gCalFlow .calendario__texto:hover {
   background: rgba(215, 0, 38, 0.7);
 }
-.calendario__evento .calendario__texto h2 {
+.gCalFlow .calendario__texto h2 {
   margin: 0;
   padding: 0;
   font-size: 2rem;
   text-transform: uppercase;
 }
-.calendario__evento .calendario__texto p {
+.gCalFlow .calendario__texto p {
   margin: 1rem, 0 0;
   padding: 0;
   font-size: 1.5rem;
 }
-.calendario__evento .calendario__texto h2, .calendario__evento .calendario__texto p {
+.gCalFlow .calendario__texto h2, .gCalFlow .calendario__texto p {
   color: #F8F5F2;
 }
-.calendario__evento .calendario__eventos {
+.gCalFlow .calendario__eventos {
   text-align: justify;
   padding: 0;
   font-family: "Roboto Condensed", sans-serif;
 }
-.calendario__evento .calendario__eventos h2, .calendario__evento .calendario__eventos h3, .calendario__evento .calendario__eventos h4, .calendario__evento .calendario__eventos p, .calendario__evento .calendario__eventos a {
+.gCalFlow .calendario__eventos h2, .gCalFlow .calendario__eventos h3, .gCalFlow .calendario__eventos h4, .gCalFlow .calendario__eventos p, .gCalFlow .calendario__eventos a {
   color: #F8F5F2;
 }
-.calendario__evento .calendario__eventos h3 {
+.gCalFlow .calendario__eventos h3 {
   font-size: 2rem;
 }
-.calendario__evento .calendario__eventos p {
+.gCalFlow .calendario__eventos p {
   font-size: 1.5rem;
 }
-.calendario__evento .calendario__eventos ul {
+.gCalFlow .calendario__eventos ul {
   padding: 1rem 2rem;
   margin: 1rem 0;
   display: grid;
@@ -1179,7 +1178,7 @@ nav a {
   gap: 1rem;
   grid-auto-rows: auto;
 }
-.calendario__evento .calendario__eventos ul li {
+.gCalFlow .calendario__eventos ul li {
   display: grid;
   grid-template-columns: repeat(auto, 1fr);
   grid-template-rows: repeat(auto, 1fr);
@@ -1187,7 +1186,7 @@ nav a {
   grid-auto-rows: auto;
   grid-template-columns: 20% 80%;
 }
-.calendario__evento .calendario__eventos ul li .tiempo {
+.gCalFlow .calendario__eventos ul li .tiempo {
   padding: 1rem;
   background: #484848;
   box-sizing: border-box;
@@ -1196,30 +1195,30 @@ nav a {
   grid-template-rows: repeat(auto, 1fr);
   gap: 2rem;
   grid-auto-rows: auto;
-  align-content: center;
+  align-content: space-around;
   justify-content: center;
   align-items: center;
   justify-items: end;
 }
-.calendario__evento .calendario__eventos ul li .tiempo h2 {
+.gCalFlow .calendario__eventos ul li .tiempo h2 {
   font-size: 4rem;
   text-align: center;
   line-height: 0.7;
 }
-.calendario__evento .calendario__eventos ul li .tiempo h2 span {
+.gCalFlow .calendario__eventos ul li .tiempo h2 span {
   font-size: 3rem;
   font-weight: 400;
 }
-.calendario__evento .calendario__eventos ul li .tiempo h3 {
+.gCalFlow .calendario__eventos ul li .tiempo h3 {
   font-size: 2.5rem;
   text-align: center;
   line-height: 0.8;
 }
-.calendario__evento .calendario__eventos ul li .tiempo h3 span {
+.gCalFlow .calendario__eventos ul li .tiempo h3 span {
   font-size: 2rem;
   font-weight: 400;
 }
-.calendario__evento .calendario__eventos ul li .detalles {
+.gCalFlow .calendario__eventos ul li .detalles {
   padding: 1rem;
   background: #F8F5F2;
   box-sizing: border-box;
@@ -1227,13 +1226,21 @@ nav a {
   flex-direction: column;
   justify-content: center;
 }
-.calendario__evento .calendario__eventos ul li .detalles h2, .calendario__evento .calendario__eventos ul li .detalles h3, .calendario__evento .calendario__eventos ul li .detalles h4, .calendario__evento .calendario__eventos ul li .detalles p, .calendario__evento .calendario__eventos ul li .detalles a {
+.gCalFlow .calendario__eventos ul li .detalles h2, .gCalFlow .calendario__eventos ul li .detalles h3, .gCalFlow .calendario__eventos ul li .detalles h4, .gCalFlow .calendario__eventos ul li .detalles p, .gCalFlow .calendario__eventos ul li .detalles a {
   color: #000B29;
   margin: 0.5rem;
 }
-.calendario__evento .calendario__eventos ul li .detalles h3 {
+.gCalFlow .calendario__eventos ul li .detalles h3 {
   font-weight: 700;
 }
-.calendario__evento .calendario__eventos ul li .detalles h4 {
+.gCalFlow .calendario__eventos ul li .detalles h4 {
   color: #D70026;
+}
+.gCalFlow .calendario__eventos ul li .detalles p {
+  font-size: calc(1.2rem + 0.5vw);
+}
+@media (min-width: 768px) {
+  .gCalFlow .calendario__eventos ul li .detalles p {
+    font-size: calc(1.5rem + 0.5vw);
+  }
 }
