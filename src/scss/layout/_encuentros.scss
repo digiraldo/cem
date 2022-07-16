@@ -1,0 +1,107 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.encuentros {
+    background: url("../img/grande/cem-img-1.jpg")fixed center/cover; //  ../img/grande/Portada-Hadime-Mas.jpg
+    height: 70rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end; 
+}
+.encuentros::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: v.$noche;
+    opacity: 0.4;
+}
+.encuentros-content {
+    padding: 0.16rem;
+    position: absolute;
+    width: 100%;
+    max-width: 70rem;
+    text-align: center;
+    color: v.$perla;
+    margin-bottom: 8rem;
+    text-shadow: -2px 2px 3px v.$noche;
+
+    picture {
+        vertical-align: middle;
+        display: inline-block;
+        -webkit-filter: drop-shadow(-2px 2px 3px v.$noche);
+        filter: drop-shadow(-2px 2px 3px v.$noche);
+    }
+    h2 {
+        margin: 0;
+        line-height: 1;
+        font-size: 4rem;
+    }
+    p {
+        margin: 0;
+        line-height: 1;
+        font-size: 2.8rem;
+        color: v.$perla;
+        margin-bottom: 2rem;
+    }
+    .btn-encuentros{
+        @include m.boton(v.$roja, v.$perla);
+    }
+
+}
+
+    .img-encuentros {
+        overflow: hidden;
+
+        &:hover {
+            bottom: -36px;
+	        opacity: 1;
+        }
+    }
+
+
+/* Shine */
+.brilla {
+    picture {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        &:hover+span {
+            bottom: -36px;
+	        opacity: 1;
+        }
+        &:hover::before {
+            -webkit-animation: shine .75s;
+            animation: shine .75s;
+        }
+    }
+
+    picture::before {
+    position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+    }
+
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}

@@ -61,7 +61,9 @@
             <nav>
                 <a href="#">Inicio</a>
                 <a href="#vision">Visión</a>
+                <a href="#calendario">Eventos</a>
                 <a href="#entrenamiento">Entrenamiento</a>
+                <a href="#encuentros">Encuentros</a>
                 <a href="#contacto">Contacto</a>
             </nav>
         </div>
@@ -81,17 +83,31 @@
             <a href="https://www.instagram.com/centromateo/" class="instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/channel/UChEoRAnQ8iTfiKkoS_rT2JA" class="youtube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
         </div>
+        <div id="gcf-ticker" style="">
+            <div class="gcf-header-block">
+            </div>
+            <div class="gcf-item-container-block">
+            <div class="gcf-item-block">
+                <div class="gcf-item-header-block">
+                <div class="gcf-item-title-block">
+                    (<span class="gcf-item-daterange"></span>)
+                    <span class="gcf-item-title">Titulo del Evento</span>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
     <video autoplay playsinline muted loop> <!-- controls --> 
         <source src="build/video/cem-hero.mp4" type="video/mp4">
-<!--         <source src="build/video/cem-hero.ogg" type="video/ogg">
+        <!-- <source src="build/video/cem-hero.ogg" type="video/ogg">
         <source src="build/video/cem-hero.webm" type="video/webm"> -->
         <track kind="subtitles" src="cem-hero-es.vtt" srclang="es" label="Español" default>
         <track kind="subtitles" src="cem-hero-en.vtt" srclang="en" label="Inglés">
     </video>
 </div>
 
-<section class="banner-vision">
+<section id="vision" class="banner-vision">
     <div class="capa">
         <div class="contenido-vision">
             <div class="titulo-mision">
@@ -152,6 +168,41 @@
         </div>
         
 </section> -->
+
+<section class="calendario" id="calendario">
+    <div id="gcf-custom-template">
+        <div class="gcf-header-block calendario__texto">
+            <div class="gcf-title-block">
+                <h2 class="gcf-title no-margin"></h2>
+                <p class="no-margin">Ver cientos de discípulos entrenados que sirven entre las naciones, multiplicándose en miles de discípulos para el Reino de Dios y Su gloria.</p>
+            </div>
+        </div>
+        <div class="calendario__eventos">
+            <ul class="gcf-item-container-block">
+                <li class="gcf-item-block">
+                    <div class="gcf-item-header-block tiempo">
+                        <div class="gcf-item-date-block">
+                            <span class="gcf-item-daterange"></span>
+                        </div>
+                    </div>
+                    <div class="gcf-item-body-block detalles">
+                        <div class="gcf-item-title-block">
+                            <h3 class="gcf-item-title"></h3>
+                        </div>
+                        <p class="gcf-item-description"></p>
+                        <!-- <div class="gcf-item-location">
+                        </div> -->
+                        <!-- <h4><i class="fa-duotone fa-ticket"></i> $1.600 USD</h4> -->
+                        <a class="enlaxe" href="#entrenamiento">Ver Detalles</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--     <div class="gcf-last-update-block">
+        Última actualización: <span class="gcf-last-update"></span>
+    </div> -->
+</section>
 
 <section id="entrenamiento" class="entrenamiento">
     <h3>Oportunidades</h3>
@@ -226,86 +277,76 @@
 </div>
 </section>
 
-<section class="calendario" id="calendario">
-    <div id="gcf-custom-template">
-        <div class="gcf-header-block calendario__texto">
-            <div class="gcf-title-block">
-                <h2 class="gcf-title no-margin"></h2>
-                <p class="no-margin">Ver cientos de discípulos entrenados que sirven entre las naciones, multiplicándose en miles de discípulos para el Reino de Dios y Su gloria.</p>
-            </div>
-        </div>
-        <div class="calendario__eventos">
-            <ul class="gcf-item-container-block">
-                <li class="gcf-item-block">
-                    <div class="gcf-item-header-block tiempo">
-                        <div class="gcf-item-date-block">
-                            <span class="gcf-item-daterange"></span>
-                        </div>
-                    </div>
-                    <div class="gcf-item-body-block detalles">
-                        <div class="gcf-item-title-block">
-                            <h3 class="gcf-item-title"></h3>
-                        </div>
-                        <p class="gcf-item-description"></p>
-                        <!-- <div class="gcf-item-location">
-                        </div> -->
-                        <!-- <h4><i class="fa-duotone fa-ticket"></i> $1.600 USD</h4> -->
-                        <a href="#">Ver Detalles</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="gcf-last-update-block">
-            Última actualización: <span class="gcf-last-update"></span>
-        </div>
+<section id="encuentros" class="encuentros">
+    <div class="encuentros-content">
+        <a class="brilla img-encuentros" href="#">
+        <picture class="brilla-img">
+            <source srcset="build/img/logo.avif" type="image/avif">
+            <source srcset="build/img/logo.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="build/img/thumb/Hadime_Mas_x200.png" alt="Logo Hadime Mas">
+        </picture>
+        </a>
+        <h2>Un lugar de encuentros</h2>
+        <p>Centro Mateo - Guadalajara, México</p>
+        <a class="btn-encuentros" href="#">Centro de Retiros</a>
     </div>
 </section>
 
+<footer class="site-footer">
+    <div class="footer-up">
+        <div class="footer-descarga">
+            <h4>Descargas</h4>
+            <ul>
+                <li><a href="#">Reglamento</a></li>
+                <li><a href="#">Folleto</a></li>
+                <li><a href="#">Solicitudes</a></li>
+            </ul>
+        </div>
+        <div class="footer-logo">
+            <picture>
+                <source srcset="build/img/logo.avif" type="image/avif">
+                <source srcset="build/img/logo.webp" type="image/webp">
+                <img loading="lazy" width="200" height="300" src="build/img/logo.png" alt="">
+            </picture>
+        </div>
+        <div class="footer-acerca">
+            <h4>Acerca de</h4>
+            <ul>
+                <li><a href="#">Misión y Visión</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Hadime</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-downd">
+        <p class="no-margin">Matthew Training Center© Todos los derechos reservados © 2022.</p>
+    </div>
+</footer>
+
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.menu-toggle').click(function() {
-            $('nav').toggleClass('active')
-        })
-    })
-</script>
 
-<script src="build/js/textos.js"></script>
+<script src="build/js/nav-menu.js"></script>
 <!-- <script src="https://kit.fontawesome.com/2a290a3f5e.js" crossorigin="anonymous"></script> -->
 <script src="build/icon/font.js" crossorigin="anonymous"></script>
 <!-- <script src="build/icon/p/js/all.min.js" crossorigin="anonymous"></script> -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-  _gCalFlow_debug = true;
-</script>
-<script type="text/javascript" src="/build/js/jquery.gcal_flow.js"></script>
-<script type="text/javascript" src="/build/js/globalize.culture.es-MX.js"></script>
+<script type="text/javascript" src="build/js/jquery.gcal_flow.js"></script>
+<script type="text/javascript" src="build/js/eventos.js"></script>
+
 <script type="text/javascript">
-  var $ = jQuery;
-  $(function() {
-    $('#gcf-simple').gCalFlow({
-      calid: 'pna6ngeltnq3fj45r5uaiavggk@group.calendar.google.com'
-    });
-    $('#gcf-design').gCalFlow({
-      calid: 'pna6ngeltnq3fj45r5uaiavggk@group.calendar.google.com',
-      maxitem: 10
-    });
-    $('#gcf-custom-template').gCalFlow({
-      calid: 'pna6ngeltnq3fj45r5uaiavggk@group.calendar.google.com',
-      maxitem: 50,
-      mode: 'updates',
-      daterange_formatter: function (start_date, end_date, allday_p) {
-      function pad(n) { return n < 10 ? "0"+n : n; }
-      var monthname = [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ];
-      return "<h2 class=\"no-margin\">" + pad(start_date.getDate()) + "<br><span>" + pad(monthname[start_date.getMonth()]) + "</span></h2>" + "<br>" + "<h3 class=\"no-margin\">" + pad(end_date.getDate()) + "<br><span>" + pad(monthname[end_date.getMonth()]) + "</span></h3>";
-      },
-    });
-  });
-
+    function rplace(){
+        var elements = document.getElementsByClassName("enlaxe");
+        for(var i=0; i < elements.length; i++) {
+            var cambio = elements[i].href.replace("%20", "-");
+                    elements[i].href = cambio;
+        }
+    }
 </script>
+
 
 </body>
 </html>

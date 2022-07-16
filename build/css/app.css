@@ -569,7 +569,7 @@ nav a {
 }
 @media (min-width: 768px) {
   header nav a:hover {
-    color: #D70026;
+    color: #d70026;
     font-weight: 500;
   }
 }
@@ -602,13 +602,13 @@ nav a {
   }
 }
 .active a:hover {
-  color: #D70026;
+  color: #d70026;
   font-weight: 500;
 }
 
 .video {
   position: relative;
-  max-height: 76rem;
+  max-height: 70rem;
   min-height: 60rem;
   overflow: hidden;
   display: flex;
@@ -617,7 +617,7 @@ nav a {
 @media (min-width: 992px) {
   .video {
     position: relative;
-    max-height: 80rem;
+    max-height: 70rem;
     min-height: 56rem;
     overflow: hidden;
     display: block;
@@ -666,7 +666,7 @@ nav a {
   z-index: 11;
   margin-bottom: 5rem;
   grid-area: 2/3/4/4;
-  order: 2;
+  order: 1;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -677,8 +677,13 @@ nav a {
 }
 .redes a {
   color: #F8F5F2;
-  font-size: 3rem;
+  font-size: 2.2rem;
   padding: 0;
+}
+@media (min-width: 480px) {
+  .redes a {
+    font-size: 3rem;
+  }
 }
 @media (min-width: 768px) {
   .redes {
@@ -712,11 +717,16 @@ nav a {
 .play {
   z-index: 22;
   grid-area: 2/2;
-  order: 1;
+  order: 2;
 }
 .play a {
   color: #F8F5F2;
-  font-size: 8rem;
+  font-size: 6rem;
+}
+@media (min-width: 480px) {
+  .play a {
+    font-size: 8rem;
+  }
 }
 @media (min-width: 768px) {
   .play a {
@@ -739,9 +749,14 @@ nav a {
   padding: 0;
   color: #F8F5F2;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 200;
   line-height: 1.2;
+}
+@media (min-width: 480px) {
+  .contenido-video h2 {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 768px) {
   .contenido-video {
@@ -764,6 +779,71 @@ nav a {
   }
 }
 
+#gcf-ticker {
+  z-index: 44;
+  order: 4;
+  background: none;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  height: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 0;
+  grid-auto-rows: auto;
+  grid-area: 3/1;
+}
+@media (min-width: 480px) {
+  #gcf-ticker {
+    height: 2.4rem;
+  }
+}
+@media (min-width: 768px) {
+  #gcf-ticker {
+    grid-area: 2/1;
+  }
+}
+@media (min-width: 992px) {
+  #gcf-ticker {
+    grid-area: 3/2;
+  }
+}
+#gcf-ticker .gcf-item-container-block {
+  margin-top: 0.2em;
+  overflow: hidden;
+  font-size: 1rem;
+}
+@media (min-width: 480px) {
+  #gcf-ticker .gcf-item-container-block {
+    font-size: 1.6rem;
+  }
+}
+#gcf-ticker .gcf-item-daterange {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.2em;
+  overflow: hidden;
+  color: #ddcfc0;
+  /* @include m.telefono {
+      font-size: small;
+  } */
+}
+#gcf-ticker .gcf-item-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+#gcf-ticker .gcf-item-title a {
+  color: #F8F5F2;
+}
+#gcf-ticker .gcf-item-header-block {
+  margin: 0;
+  padding: 0;
+  height: 2.2rem;
+}
+
 .banner-vision {
   position: relative;
   widows: 100%;
@@ -772,8 +852,9 @@ nav a {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 50rem;
-  min-height: 40rem;
+  background-attachment: fixed;
+  max-height: 45rem;
+  min-height: 30rem;
   overflow: hidden;
 }
 
@@ -858,118 +939,200 @@ nav a {
   border: 1px solid #F8F5F2;
 }
 
-.banner {
-  background: url("../img/grande/Portada-Hadime-Mas.jpg") center/cover;
-  height: 70rem;
+.calendario {
   position: relative;
+  background-image: url(../img/grande/atardecer-2.jpg);
+  height: 100rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  /*     
+
+      widows: 100%;
+      height: calc(108vh - 5rem);
+
+
+      max-height: 80rem;
+      min-height: 50rem;
+      overflow: hidden; */
+}
+@media (min-width: 992px) {
+  .calendario {
+    background-color: #F8F5F2;
+    height: 80rem;
+  }
+}
+
+.gCalFlow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(38, 50, 81);
+  background: linear-gradient(270deg, rgba(38, 50, 81, 0.4) 0%, rgba(0, 11, 41, 0.2) 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: end;
+  justify-content: center;
+  align-content: center;
 }
-
-.banner::before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: #000B29;
-  opacity: 0.4;
+@media (min-width: 992px) {
+  .gCalFlow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 0rem;
+    grid-auto-rows: auto;
+    margin: 0;
+    background: #F8F5F2;
+  }
 }
-
-.banner-content {
-  padding: 0.16rem;
-  position: absolute;
-  width: 100%;
-  max-width: 70rem;
+.gCalFlow .calendario__texto {
   text-align: center;
+  padding: 2rem 1rem;
+  margin: 0 2rem;
+  box-sizing: border-box;
   color: #F8F5F2;
-  margin-bottom: 8rem;
+  background: rgba(237, 184, 61, 0.7);
+  transition: 0.5s;
 }
-.banner-content picture {
-  vertical-align: middle;
-  display: inline-block;
+.gCalFlow .calendario__texto:hover {
+  background: rgba(215, 0, 38, 0.7);
 }
-.banner-content h2 {
-  margin: 0;
-  line-height: 1;
-  font-size: 4rem;
+@media (min-width: 992px) {
+  .gCalFlow .calendario__texto:hover {
+    background: url(../img/grande/atardecer-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  .gCalFlow .calendario__texto:hover p {
+    font-size: 1.8rem;
+  }
 }
-.banner-content p {
-  margin: 0;
-  line-height: 1;
-  font-size: 2.8rem;
-  color: #F8F5F2;
-  margin-bottom: 2rem;
-}
-.banner-content .btn-banner {
-  background-color: #D70026;
-  color: #F8F5F2;
-  padding: 1rem 3rem;
-  font-size: 2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  text-align: center;
-  border: none;
-  transition: all 0.3s ease-in-out;
-}
-.banner-content .btn-banner:hover {
-  padding: 1rem 4rem;
-  background-color: #F8F5F2;
-  opacity: 0.7;
-  color: #D70026;
-  border: 1px solid #F8F5F2;
-}
-
-.img-banner {
-  overflow: hidden;
-}
-.img-banner:hover {
-  bottom: -36px;
-  opacity: 1;
-}
-
-/* Shine */
-.brillar picture {
-  position: relative;
+.gCalFlow .calendario__texto h2 {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  font-size: 3rem;
+  text-transform: uppercase;
 }
-.brillar picture:hover + span {
-  bottom: -36px;
-  opacity: 1;
+.gCalFlow .calendario__texto h2 a {
+  color: #000B29;
 }
-.brillar picture:hover::before {
-  -webkit-animation: shine 0.75s;
-  animation: shine 0.75s;
+.gCalFlow .calendario__texto p {
+  margin: 1rem, 0 0;
+  padding: 0;
+  font-size: 1.5rem;
 }
-.brillar picture::before {
-  position: absolute;
-  top: 0;
-  left: -75%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 50%;
-  height: 100%;
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-  -webkit-transform: skewX(-25deg);
-  transform: skewX(-25deg);
+.gCalFlow .calendario__texto h2, .gCalFlow .calendario__texto p {
+  color: #F8F5F2;
+}
+@media (min-width: 992px) {
+  .gCalFlow .calendario__texto {
+    margin: 0;
+    background-image: url(../img/grande/atardecer-2.jpg);
+    height: 82rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.gCalFlow .calendario__eventos {
+  text-align: justify;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.gCalFlow .calendario__eventos h2, .gCalFlow .calendario__eventos h3, .gCalFlow .calendario__eventos h4, .gCalFlow .calendario__eventos p, .gCalFlow .calendario__eventos a {
+  color: #F8F5F2;
+}
+.gCalFlow .calendario__eventos h3 {
+  font-size: 2rem;
+}
+.gCalFlow .calendario__eventos p {
+  font-size: 1.5rem;
+}
+.gCalFlow .calendario__eventos ul {
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 0rem;
+  grid-auto-rows: auto;
+}
+.gCalFlow .calendario__eventos ul li {
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 0;
+  grid-auto-rows: auto;
+  grid-template-columns: 20% 80%;
+  border: 1px solid #808080;
+}
+.gCalFlow .calendario__eventos ul li .tiempo {
+  padding: 1rem;
+  background: #484848;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 2rem;
+  grid-auto-rows: auto;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: end;
+}
+.gCalFlow .calendario__eventos ul li .tiempo h2 {
+  font-size: 4rem;
+  text-align: center;
+  line-height: 0.7;
+}
+.gCalFlow .calendario__eventos ul li .tiempo h2 span {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.gCalFlow .calendario__eventos ul li .tiempo h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 0.8;
+}
+.gCalFlow .calendario__eventos ul li .tiempo h3 span {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.gCalFlow .calendario__eventos ul li .detalles {
+  padding: 1rem;
+  background: #F8F5F2;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gCalFlow .calendario__eventos ul li .detalles h2, .gCalFlow .calendario__eventos ul li .detalles h3, .gCalFlow .calendario__eventos ul li .detalles h4, .gCalFlow .calendario__eventos ul li .detalles p, .gCalFlow .calendario__eventos ul li .detalles a {
+  color: #000B29;
+  margin: 0.5rem;
+}
+.gCalFlow .calendario__eventos ul li .detalles h3 {
+  font-weight: 700;
+}
+.gCalFlow .calendario__eventos ul li .detalles h4 {
+  color: #d70026;
+}
+.gCalFlow .calendario__eventos ul li .detalles p {
+  font-size: calc(1.2rem + 0.5vw);
+}
+@media (min-width: 768px) {
+  .gCalFlow .calendario__eventos ul li .detalles p {
+    font-size: calc(1.5rem + 0.5vw);
+  }
+}
+@media (min-width: 992px) {
+  .gCalFlow .calendario__eventos ul {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-@-webkit-keyframes shine {
-  100% {
-    left: 125%;
-  }
-}
-@keyframes shine {
-  100% {
-    left: 125%;
-  }
-}
 .entrenamiento {
   background-color: black;
   padding: 2rem 0;
@@ -1100,147 +1263,174 @@ nav a {
   clip-path: polygon(0 100%, 0 calc(100% - var(--d)), 50% calc(100% - var(--d) - var(--w) / 2), 100% calc(100% - var(--d)), 100% 100%, calc(100% - var(--d)) calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
 }
 
-.calendario {
+.encuentros {
+  background: url("../img/grande/cem-img-1.jpg") fixed center/cover;
+  height: 70rem;
   position: relative;
-  background-image: url(../img/grande/mapa-mundo.jpg);
-  height: 90rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  /*     
-
-      widows: 100%;
-      height: calc(108vh - 5rem);
-
-
-      max-height: 80rem;
-      min-height: 50rem;
-      overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
 }
 
-.gCalFlow {
+.encuentros::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #000B29;
+  opacity: 0.4;
+}
+
+.encuentros-content {
+  padding: 0.16rem;
   position: absolute;
   width: 100%;
-  height: 100%;
-  background: rgb(38, 50, 81);
-  background: linear-gradient(270deg, rgba(38, 50, 81, 0.97) 0%, rgba(0, 11, 41, 0.8) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-.gCalFlow .calendario__texto {
+  max-width: 70rem;
   text-align: center;
-  padding: 2rem 1rem;
-  margin: 0 2rem;
-  box-sizing: border-box;
   color: #F8F5F2;
-  background: rgba(237, 184, 61, 0.7);
-  transition: 0.5s;
+  margin-bottom: 8rem;
+  text-shadow: -2px 2px 3px #000B29;
 }
-.gCalFlow .calendario__texto:hover {
-  background: rgba(215, 0, 38, 0.7);
+.encuentros-content picture {
+  vertical-align: middle;
+  display: inline-block;
+  -webkit-filter: drop-shadow(-2px 2px 3px #000B29);
+  filter: drop-shadow(-2px 2px 3px #000B29);
 }
-.gCalFlow .calendario__texto h2 {
+.encuentros-content h2 {
+  margin: 0;
+  line-height: 1;
+  font-size: 4rem;
+}
+.encuentros-content p {
+  margin: 0;
+  line-height: 1;
+  font-size: 2.8rem;
+  color: #F8F5F2;
+  margin-bottom: 2rem;
+}
+.encuentros-content .btn-encuentros {
+  background-color: #d70026;
+  color: #F8F5F2;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.encuentros-content .btn-encuentros:hover {
+  padding: 1rem 4rem;
+  background-color: #F8F5F2;
+  opacity: 0.7;
+  color: #d70026;
+  border: 1px solid #F8F5F2;
+}
+
+.img-encuentros {
+  overflow: hidden;
+}
+.img-encuentros:hover {
+  bottom: -36px;
+  opacity: 1;
+}
+
+/* Shine */
+.brilla picture {
+  position: relative;
   margin: 0;
   padding: 0;
-  font-size: 2rem;
-  text-transform: uppercase;
+  overflow: hidden;
 }
-.gCalFlow .calendario__texto p {
-  margin: 1rem, 0 0;
-  padding: 0;
-  font-size: 1.5rem;
+.brilla picture:hover + span {
+  bottom: -36px;
+  opacity: 1;
 }
-.gCalFlow .calendario__texto h2, .gCalFlow .calendario__texto p {
-  color: #F8F5F2;
+.brilla picture:hover::before {
+  -webkit-animation: shine 0.75s;
+  animation: shine 0.75s;
 }
-.gCalFlow .calendario__eventos {
-  text-align: justify;
-  padding: 0;
-  font-family: "Roboto Condensed", sans-serif;
+.brilla picture::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
 }
-.gCalFlow .calendario__eventos h2, .gCalFlow .calendario__eventos h3, .gCalFlow .calendario__eventos h4, .gCalFlow .calendario__eventos p, .gCalFlow .calendario__eventos a {
-  color: #F8F5F2;
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
 }
-.gCalFlow .calendario__eventos h3 {
-  font-size: 2rem;
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
 }
-.gCalFlow .calendario__eventos p {
-  font-size: 1.5rem;
-}
-.gCalFlow .calendario__eventos ul {
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  gap: 1rem;
-  grid-auto-rows: auto;
-}
-.gCalFlow .calendario__eventos ul li {
-  display: grid;
-  grid-template-columns: repeat(auto, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  gap: 0;
-  grid-auto-rows: auto;
-  grid-template-columns: 20% 80%;
-}
-.gCalFlow .calendario__eventos ul li .tiempo {
-  padding: 1rem;
-  background: #484848;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(auto, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  gap: 2rem;
-  grid-auto-rows: auto;
-  align-content: space-around;
-  justify-content: center;
-  align-items: center;
-  justify-items: end;
-}
-.gCalFlow .calendario__eventos ul li .tiempo h2 {
-  font-size: 4rem;
-  text-align: center;
-  line-height: 0.7;
-}
-.gCalFlow .calendario__eventos ul li .tiempo h2 span {
-  font-size: 3rem;
-  font-weight: 400;
-}
-.gCalFlow .calendario__eventos ul li .tiempo h3 {
-  font-size: 2.5rem;
-  text-align: center;
-  line-height: 0.8;
-}
-.gCalFlow .calendario__eventos ul li .tiempo h3 span {
-  font-size: 2rem;
-  font-weight: 400;
-}
-.gCalFlow .calendario__eventos ul li .detalles {
-  padding: 1rem;
-  background: #F8F5F2;
-  box-sizing: border-box;
+.site-footer .footer-up {
+  background-color: #000000;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-.gCalFlow .calendario__eventos ul li .detalles h2, .gCalFlow .calendario__eventos ul li .detalles h3, .gCalFlow .calendario__eventos ul li .detalles h4, .gCalFlow .calendario__eventos ul li .detalles p, .gCalFlow .calendario__eventos ul li .detalles a {
-  color: #000B29;
-  margin: 0.5rem;
-}
-.gCalFlow .calendario__eventos ul li .detalles h3 {
-  font-weight: 700;
-}
-.gCalFlow .calendario__eventos ul li .detalles h4 {
-  color: #D70026;
-}
-.gCalFlow .calendario__eventos ul li .detalles p {
-  font-size: calc(1.2rem + 0.5vw);
+  justify-content: space-around;
+  align-items: center;
 }
 @media (min-width: 768px) {
-  .gCalFlow .calendario__eventos ul li .detalles p {
-    font-size: calc(1.5rem + 0.5vw);
+  .site-footer .footer-up {
+    flex-direction: row;
   }
+}
+.site-footer .footer-up .footer-descarga h4 {
+  color: #F8F5F2;
+  text-align: center;
+  font-weight: 700;
+}
+.site-footer .footer-up .footer-descarga ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.site-footer .footer-up .footer-descarga ul li {
+  padding: 0.4rem 0;
+}
+.site-footer .footer-up .footer-descarga ul li a {
+  color: #808080;
+  font-weight: 500;
+}
+.site-footer .footer-up .footer-acerca h4 {
+  color: #F8F5F2;
+  text-align: center;
+  font-weight: 700;
+}
+.site-footer .footer-up .footer-acerca ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.site-footer .footer-up .footer-acerca ul li {
+  padding: 0.4rem 0;
+}
+.site-footer .footer-up .footer-acerca ul li a {
+  color: #808080;
+  font-weight: 500;
+}
+.site-footer .footer-downd {
+  background-color: #000B29;
+  padding: 1.5rem;
+}
+.site-footer .footer-downd p {
+  color: #F8F5F2;
+  font-size: 1.5rem;
+  text-align: center;
 }
