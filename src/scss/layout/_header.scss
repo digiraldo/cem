@@ -3,7 +3,17 @@
 
 .header {
     background-color: v.$noche;
-
+    @include m.tablet {
+       &.fijo {
+        left: 0;
+        top: 0;
+        z-index: 66;
+        position: fixed;
+        width: 100%;
+        box-shadow: .1rem .2rem .3rem #333;
+    } 
+    }
+    
     .contenido-header {
         padding: 0.6rem;
         text-align: center;
@@ -16,6 +26,7 @@
 
     }
 }
+
 
 .logo {
     display: inline-block;
@@ -148,6 +159,5 @@ nav {
             color: v.$roja;
             font-weight: 500;
             }
-    }
-    
+    } 
 }
