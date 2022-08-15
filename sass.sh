@@ -35,6 +35,10 @@ npm install gulp-terser-js --save-dev
 #* npm run tarea
 #* npx gulp tarea
 
+# Para iniciar gulpfile.js predeterminado con:
+npm run
+npx gulp
+
 # para que gulp se conecte con sass
 npm i -D gulp-sass
 
